@@ -1,0 +1,133 @@
+quarter_id,sector,service_line,account,revenue_target_usd
+2026Q1,Tech - New Age,TS - EA,Umbra Health 01,2396654.35607496
+2026Q1,Tech - New Age,TS - DAAI,Umbra Health 01,3011801.1233645133
+2026Q1,Tech - New Age,WC - Consulting,Umbra Health 01,2218842.93538788
+2026Q1,Health,TS - CIS,Apex Mobility 02,666727.1754800022
+2026Q1,Health,TS - CRS,Apex Mobility 02,257018.65295933973
+2026Q1,Health,Engineering,Apex Mobility 02,566486.5781506468
+2026Q1,Health,WC - Consulting,Apex Mobility 02,2407430.054586838
+2026Q1,Tech - Software and Gaming,Engineering,Horizon Foods 03,255262.8022873804
+2026Q1,Tech - Software and Gaming,TS - EA,Horizon Foods 03,869447.2432949292
+2026Q1,Tech - Software and Gaming,TS - ICD,Horizon Foods 03,1930139.6285937321
+2026Q1,Tech - New Age,TS - CIS,Ever Health 04,26384223.660867523
+2026Q1,Tech - New Age,WC - Consulting,Ever Health 04,38747070.945996225
+2026Q1,Tech - New Age,TS - EA,Ever Health 04,3583528.9537774073
+2026Q1,Tech - New Age,TS - TTMS,Ever Health 04,21488728.596261024
+2026Q1,Communications,TS - TTMS,Vertex Consulting 05,2274310.382100075
+2026Q1,Communications,TS - ICD,Vertex Consulting 05,2385748.651667242
+2026Q1,Tech - Software and Gaming,TS - ICD,Crown Software 06,64467128.07500374
+2026Q1,Tech - Software and Gaming,TS - DAAI,Crown Software 06,13882390.45684307
+2026Q1,Tech - Software and Gaming,TS - CIS,Crown Software 06,24500217.37779623
+2026Q1,Tech - Software and Gaming,TS - EA,Crown Software 06,924742.5826463293
+2026Q1,Tech - New Age,TS - EA,Blue Systems 07,1342229.173336476
+2026Q1,Tech - New Age,Engineering,Blue Systems 07,710581.1546728852
+2026Q1,Tech - New Age,TS - CRS,Blue Systems 07,296189.1426821433
+2026Q1,Tech - New Age,TS - CIS,Blue Systems 07,215927.2971618579
+2026Q1,Tech - New Age,TS - DAAI,Crown Holdings 08,1656498.3001050598
+2026Q1,Tech - New Age,WC - Consulting,Crown Holdings 08,2695455.7967841453
+2026Q1,Communications,Engineering,Horizon Aerospace 09,3069686.734298756
+2026Q1,Communications,WC - Consulting,Horizon Aerospace 09,1560546.8117546856
+2026Q1,Health,TS - EA,Titan Systems 10,2461709.573861724
+2026Q1,Health,Engineering,Titan Systems 10,5698076.265240335
+2026Q1,Health,TS - CRS,Titan Systems 10,4811885.825843163
+2026Q1,Health,TS - CIS,River Holdings 11,2042795.3479899806
+2026Q1,Health,WC - Consulting,River Holdings 11,3872809.911326262
+2026Q1,Health,TS - EA,River Holdings 11,3807301.6183670717
+2026Q1,Tech - Software and Gaming,TS - CRS,Willow Consulting 12,1800191.4837107998
+2026Q1,Tech - Software and Gaming,TS - ICD,Willow Consulting 12,1045895.4707626719
+2026Q1,Tech - New Age,WC - Consulting,Nimbus Foods 13,1856126.51383648
+2026Q1,Tech - New Age,TS - EA,Nimbus Foods 13,258942.72110714894
+2026Q1,Tech - New Age,TS - DAAI,Nimbus Foods 13,180088.8315452091
+2026Q1,Tech - New Age,TS - TTMS,Nimbus Foods 13,1376274.9276652553
+2026Q1,Tech - Software and Gaming,TS - DAAI,Orion Mobility 14,1232410.9137804375
+2026Q1,Tech - Software and Gaming,TS - CIS,Orion Mobility 14,930285.2328377168
+2026Q1,Health,BPS,Stratus Systems 15,706454.3270654118
+2026Q1,Health,WC - Consulting,Stratus Systems 15,830022.7756896425
+2026Q1,Health,TS - CRS,Stratus Systems 15,1666518.1992964586
+2026Q1,Consumer,BPS,Nova Labs 16,2440677.4224495613
+2026Q1,Consumer,Engineering,Nova Labs 16,2375241.2060655137
+2026Q1,Health - UHG,TS - EA,Willow Software 17,3528108.3824581346
+2026Q1,Health - UHG,TS - CRS,Willow Software 17,3660795.3544113105
+2026Q1,Communications,TS - CIS,Keystone Mobility 18,416190.2924872284
+2026Q1,Communications,BPS,Keystone Mobility 18,720440.8520368114
+2026Q1,Communications,TS - EA,Keystone Mobility 18,117284.13328024758
+2026Q1,Communications,TS - CRS,Keystone Mobility 18,1755713.7758900304
+2026Q1,Tech - Software and Gaming,TS - ICD,Ever Holdings 19,3416068.126707746
+2026Q1,Tech - Software and Gaming,TS - CRS,Ever Holdings 19,21480572.666518956
+2026Q1,Tech - Software and Gaming,Engineering,Ever Holdings 19,31260497.021005183
+2026Q1,Tech - Software and Gaming,WC - Consulting,Ever Holdings 19,21435157.810555078
+2026Q1,Health - UHG,WC - Consulting,Nova Energy 20,1584023.669136349
+2026Q1,Health - UHG,TS - EA,Nova Energy 20,5802.20449114954
+2026Q1,Tech - New Age,TS - TTMS,Delta Retail 21,604686.4834872549
+2026Q1,Tech - New Age,TS - CIS,Delta Retail 21,3278689.584560217
+2026Q1,Consumer,TS - EA,Matrix Health 22,196981.1413866535
+2026Q1,Consumer,TS - CIS,Matrix Health 22,429632.8231104343
+2026Q1,Consumer,TS - ICD,Matrix Health 22,1963800.984479289
+2026Q1,Tech - Software and Gaming,TS - CRS,Lumina Telecom 23,1322111.826097387
+2026Q1,Tech - Software and Gaming,TS - CIS,Lumina Telecom 23,1970419.9902267668
+2026Q1,Tech - Software and Gaming,TS - TTMS,Titan Mobility 24,1343493.002533822
+2026Q1,Tech - Software and Gaming,TS - CRS,Titan Mobility 24,1472506.3545860236
+2026Q1,Tech - New Age,TS - TTMS,Stratus Networks 25,23989535.37238309
+2026Q1,Tech - New Age,TS - DAAI,Stratus Networks 25,70399743.84690404
+2026Q1,Consumer,TS - TTMS,Zenith Gaming 26,9008705.451872673
+2026Q1,Consumer,TS - CIS,Zenith Gaming 26,10527714.536947727
+2026Q1,Consumer,BPS,Zenith Gaming 26,31009230.3402087
+2026Q1,Consumer,TS - ICD,Zenith Gaming 26,2185926.457645389
+2026Q1,Health,TS - CIS,River Health 27,2933.209888637937
+2026Q1,Health,TS - ICD,River Health 27,1346159.097454155
+2026Q1,Health,BPS,River Health 27,810099.9563180788
+2026Q1,Communications,TS - ICD,Synergy Logistics 28,6255229.212437391
+2026Q1,Communications,TS - EA,Synergy Logistics 28,740667.5290270009
+2026Q1,Communications,TS - CRS,Synergy Logistics 28,1749623.748233064
+2026Q1,Communications,TS - DAAI,Synergy Logistics 28,2146884.5453152205
+2026Q1,Communications,TS - EA,Crown Consulting 29,10312568.577601632
+2026Q1,Communications,TS - CIS,Crown Consulting 29,6706684.677234693
+2026Q1,Communications,Engineering,Crown Consulting 29,45147571.2679057
+2026Q1,Tech - New Age,BPS,Jade Telecom 30,264738.8231967446
+2026Q1,Tech - New Age,TS - CRS,Jade Telecom 30,507426.3196873794
+2026Q1,Tech - New Age,TS - ICD,Jade Telecom 30,1778492.0530758025
+2026Q1,Tech - New Age,WC - Consulting,Summit Holdings 31,7803926.40702582
+2026Q1,Tech - New Age,TS - DAAI,Summit Holdings 31,1745830.0083145436
+2026Q1,Tech - Software and Gaming,TS - TTMS,Willow Retail 32,5506662.494050782
+2026Q1,Tech - Software and Gaming,WC - Consulting,Willow Retail 32,9936784.74314132
+2026Q1,Consumer,TS - CIS,Blue Foods 33,474249.95863870456
+2026Q1,Consumer,BPS,Blue Foods 33,222144.41529380606
+2026Q1,Consumer,TS - CRS,Blue Foods 33,868740.2356616816
+2026Q1,Consumer,TS - TTMS,Blue Foods 33,901117.36056938
+2026Q1,Health,TS - DAAI,Nova Capital 34,7813130.718504799
+2026Q1,Health,Engineering,Nova Capital 34,44232185.14855417
+2026Q1,Health,BPS,Nova Capital 34,9715291.725772588
+2026Q1,Health,TS - CRS,Nova Capital 34,23997639.56786256
+2026Q1,Health,TS - CRS,Crown Foods 35,2389926.089786471
+2026Q1,Health,BPS,Crown Foods 35,2346243.578792004
+2026Q1,Health,TS - CIS,Crown Foods 35,136317.69070788732
+2026Q1,Consumer,TS - EA,Cobalt Health 36,537527.6828092213
+2026Q1,Consumer,BPS,Cobalt Health 36,1784993.2211083905
+2026Q1,Consumer,WC - Consulting,Cobalt Health 36,6773331.230070037
+2026Q1,Communications,BPS,Matrix Mobility 37,577102.5017435055
+2026Q1,Communications,TS - ICD,Matrix Mobility 37,294081.18163470103
+2026Q1,Communications,TS - DAAI,Matrix Mobility 37,740060.9875250485
+2026Q1,Communications,Engineering,Matrix Mobility 37,1068760.9044678882
+2026Q1,Health,WC - Consulting,Orion Telecom 38,874485.0485166719
+2026Q1,Health,TS - DAAI,Orion Telecom 38,1093753.4057799843
+2026Q1,Health,TS - CIS,Orion Telecom 38,956772.5536497325
+2026Q1,Health,TS - EA,Orion Telecom 38,816649.6142180061
+2026Q1,Consumer,TS - CRS,Falcon Telecom 39,3125931.4893760215
+2026Q1,Consumer,TS - CIS,Falcon Telecom 39,2802184.590357027
+2026Q1,Tech - New Age,Engineering,Lumina Holdings 40,1556714.159481921
+2026Q1,Tech - New Age,TS - CRS,Lumina Holdings 40,2299315.338188625
+2026Q1,Tech - New Age,TS - TTMS,Lumina Holdings 40,620846.8645129737
+2026Q1,Tech - New Age,BPS,Lumina Holdings 40,604332.9847864035
+2026Q1,Health,TS - DAAI,Vertex Mobility 41,43118.66876096279
+2026Q1,Health,Engineering,Vertex Mobility 41,3484539.802011953
+2026Q1,Tech - Software and Gaming,BPS,Willow Retail 42,40885837.79112452
+2026Q1,Tech - Software and Gaming,TS - ICD,Willow Retail 42,52205520.25193681
+2026Q1,Tech - New Age,TS - CIS,Titan Labs 43,24209050.22469915
+2026Q1,Tech - New Age,TS - CRS,Titan Labs 43,24894864.599589996
+2026Q1,Tech - New Age,Engineering,Titan Labs 43,11188473.169273
+2026Q1,Consumer,TS - CIS,River Foods 44,1467746.3998186756
+2026Q1,Consumer,TS - ICD,River Foods 44,2285894.874656238
+2026Q1,Tech - Software and Gaming,TS - TTMS,Falcon Gaming 45,287153.7969700385
+2026Q1,Tech - Software and Gaming,TS - CRS,Falcon Gaming 45,2663640.7727326043
+2026Q1,Tech - Software and Gaming,Engineering,Falcon Gaming 45,213045.288915214
+2026Q1,Tech - Software and Gaming,WC - Consulting,Falcon Gaming 45,542445.743448726

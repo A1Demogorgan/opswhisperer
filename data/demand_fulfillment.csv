@@ -1,0 +1,166 @@
+demand_id,order_id,sector,service_line,account,skillset,volume_of_demand,fulfillment_source,fulfillment_type,demand_start_date,allocated_date,billed_date,time_to_allocate_days,time_to_bill_days
+DEM-000001,ORD-00003,Tech - New Age,TS - EA,Umbra Health 01,Java,2,Internal,Customer_Billed,2026-02-21,2026-03-05,2026-03-09,12,16.0
+DEM-000002,ORD-00011,Health,TS - CRS,Apex Mobility 02,Python,1,Internal,Customer_Billed,2026-02-11,2026-02-24,2026-03-02,13,19.0
+DEM-000003,ORD-00011,Health,TS - CRS,Apex Mobility 02,Data Engineering,1,External,Customer_Billed,2026-01-14,2026-01-19,2026-01-25,5,11.0
+DEM-000004,ORD-00012,Health,Engineering,Apex Mobility 02,SAP,-1,External,Customer_Billed,2026-01-06,2026-01-11,2026-01-16,5,10.0
+DEM-000005,ORD-00012,Health,Engineering,Apex Mobility 02,Azure,1,Internal,Customer_Billed,2026-01-17,2026-02-05,2026-02-17,19,31.0
+DEM-000006,ORD-00012,Health,Engineering,Apex Mobility 02,Cloud,1,External,Customer_Billed,2026-02-02,2026-02-15,2026-02-21,13,19.0
+DEM-000007,ORD-00014,Health,WC - Consulting,Apex Mobility 02,QA,6,External,Customer_Billed,2026-01-29,2026-02-24,2026-02-28,26,30.0
+DEM-000008,ORD-00017,Tech - Software and Gaming,Engineering,Horizon Foods 03,QA,3,Internal,Allocated_Not_Billed,2026-01-17,2026-02-02,,16,
+DEM-000009,ORD-00018,Tech - Software and Gaming,Engineering,Horizon Foods 03,Salesforce,4,Internal,Customer_Billed,2026-02-16,2026-02-23,2026-02-26,7,10.0
+DEM-000010,ORD-00022,Tech - Software and Gaming,TS - ICD,Horizon Foods 03,Python,0,Internal,Customer_Billed,2026-01-24,2026-01-25,2026-02-03,1,10.0
+DEM-000011,ORD-00022,Tech - Software and Gaming,TS - ICD,Horizon Foods 03,Cloud,1,Internal,Customer_Billed,2026-02-06,2026-02-13,2026-02-14,7,8.0
+DEM-000012,ORD-00022,Tech - Software and Gaming,TS - ICD,Horizon Foods 03,Python,1,Internal,Customer_Billed,2026-02-16,2026-03-02,2026-03-03,14,15.0
+DEM-000013,ORD-00028,Tech - New Age,TS - EA,Ever Health 04,Azure,3,Internal,Customer_Billed,2026-02-22,2026-03-09,2026-03-18,15,24.0
+DEM-000014,ORD-00028,Tech - New Age,TS - EA,Ever Health 04,Java,1,External,Allocated_Not_Billed,2026-03-09,2026-03-29,,20,
+DEM-000015,ORD-00037,Tech - Software and Gaming,TS - ICD,Crown Software 06,DevOps,2,External,Customer_Billed,2026-02-05,2026-02-08,2026-02-10,3,5.0
+DEM-000016,ORD-00037,Tech - Software and Gaming,TS - ICD,Crown Software 06,Mulesoft,1,External,Customer_Billed,2026-03-09,2026-03-16,2026-03-17,7,8.0
+DEM-000017,ORD-00038,Tech - Software and Gaming,TS - DAAI,Crown Software 06,Cybersecurity,1,Internal,Customer_Billed,2026-01-01,2026-01-28,2026-02-10,27,40.0
+DEM-000018,ORD-00038,Tech - Software and Gaming,TS - DAAI,Crown Software 06,Azure,1,Internal,Customer_Billed,2026-01-09,2026-02-01,2026-02-12,23,34.0
+DEM-000019,ORD-00038,Tech - Software and Gaming,TS - DAAI,Crown Software 06,Cybersecurity,1,External,Customer_Billed,2026-01-20,2026-02-09,2026-02-18,20,29.0
+DEM-000020,ORD-00044,Tech - New Age,TS - EA,Blue Systems 07,QA,1,Internal,Allocated_Not_Billed,2026-01-03,2026-01-20,,17,
+DEM-000021,ORD-00044,Tech - New Age,TS - EA,Blue Systems 07,Cybersecurity,1,Internal,Customer_Billed,2026-01-09,2026-01-28,2026-02-04,19,26.0
+DEM-000022,ORD-00046,Tech - New Age,Engineering,Blue Systems 07,AWS,-1,Internal,Customer_Billed,2026-02-14,2026-03-11,2026-03-17,25,31.0
+DEM-000023,ORD-00046,Tech - New Age,Engineering,Blue Systems 07,GCP,1,Internal,Customer_Billed,2026-01-23,2026-01-29,2026-02-04,6,12.0
+DEM-000024,ORD-00046,Tech - New Age,Engineering,Blue Systems 07,Mulesoft,1,External,Customer_Billed,2026-01-07,2026-01-18,2026-01-25,11,18.0
+DEM-000025,ORD-00048,Tech - New Age,TS - CRS,Blue Systems 07,QA,1,External,Customer_Billed,2026-01-05,2026-01-15,2026-01-24,10,19.0
+DEM-000026,ORD-00048,Tech - New Age,TS - CRS,Blue Systems 07,DevOps,1,External,Allocated_Not_Billed,2026-01-01,2026-01-07,,6,
+DEM-000027,ORD-00050,Tech - New Age,TS - CRS,Blue Systems 07,Azure,0,External,Customer_Billed,2026-01-31,2026-02-22,2026-02-26,22,26.0
+DEM-000028,ORD-00050,Tech - New Age,TS - CRS,Blue Systems 07,React/Frontend,2,Internal,Customer_Billed,2026-01-01,2026-01-11,2026-01-17,10,16.0
+DEM-000029,ORD-00051,Tech - New Age,TS - CIS,Blue Systems 07,Data Engineering,3,External,Customer_Billed,2026-02-13,2026-03-02,2026-03-05,17,20.0
+DEM-000030,ORD-00057,Communications,Engineering,Horizon Aerospace 09,DevOps,0,External,Customer_Billed,2026-02-01,2026-02-21,2026-03-05,20,32.0
+DEM-000031,ORD-00057,Communications,Engineering,Horizon Aerospace 09,SAP,2,Internal,Allocated_Not_Billed,2026-01-30,2026-02-09,,10,
+DEM-000032,ORD-00059,Communications,WC - Consulting,Horizon Aerospace 09,SAP,0,External,Customer_Billed,2026-02-13,2026-03-10,2026-03-18,25,33.0
+DEM-000033,ORD-00059,Communications,WC - Consulting,Horizon Aerospace 09,GCP,1,Internal,Allocated_Not_Billed,2026-01-12,2026-02-07,,26,
+DEM-000034,ORD-00060,Health,TS - EA,Titan Systems 10,React/Frontend,1,External,Customer_Billed,2026-01-16,2026-02-01,2026-02-12,16,27.0
+DEM-000035,ORD-00060,Health,TS - EA,Titan Systems 10,Java,1,Internal,Customer_Billed,2026-01-10,2026-01-24,2026-02-03,14,24.0
+DEM-000036,ORD-00061,Health,TS - EA,Titan Systems 10,Cloud,0,External,Customer_Billed,2026-01-08,2026-01-24,2026-02-04,16,27.0
+DEM-000037,ORD-00061,Health,TS - EA,Titan Systems 10,Cybersecurity,1,Internal,Allocated_Not_Billed,2026-01-23,2026-02-06,,14,
+DEM-000038,ORD-00061,Health,TS - EA,Titan Systems 10,Salesforce,1,Internal,Customer_Billed,2026-01-29,2026-02-09,2026-02-13,11,15.0
+DEM-000039,ORD-00063,Health,TS - CRS,Titan Systems 10,Data Engineering,0,Internal,Customer_Billed,2026-02-19,2026-03-11,2026-03-23,20,32.0
+DEM-000040,ORD-00063,Health,TS - CRS,Titan Systems 10,Cybersecurity,1,Internal,Customer_Billed,2026-02-10,2026-02-27,2026-03-07,17,25.0
+DEM-000041,ORD-00072,Health,TS - EA,River Holdings 11,QA,0,Internal,Customer_Billed,2026-02-03,2026-02-14,2026-02-25,11,22.0
+DEM-000042,ORD-00072,Health,TS - EA,River Holdings 11,AWS,1,Internal,Customer_Billed,2026-01-29,2026-02-18,2026-02-22,20,24.0
+DEM-000043,ORD-00072,Health,TS - EA,River Holdings 11,QA,1,Internal,Customer_Billed,2026-01-17,2026-02-01,2026-02-10,15,24.0
+DEM-000044,ORD-00075,Tech - Software and Gaming,TS - ICD,Willow Consulting 12,DevOps,1,Internal,Customer_Billed,2026-03-03,2026-03-12,2026-03-16,9,13.0
+DEM-000045,ORD-00075,Tech - Software and Gaming,TS - ICD,Willow Consulting 12,Python,1,Internal,Customer_Billed,2026-01-11,2026-01-21,2026-01-27,10,16.0
+DEM-000046,ORD-00075,Tech - Software and Gaming,TS - ICD,Willow Consulting 12,AWS,1,Internal,Customer_Billed,2026-02-12,2026-02-20,2026-02-23,8,11.0
+DEM-000047,ORD-00079,Tech - New Age,TS - EA,Nimbus Foods 13,Python,1,Internal,Customer_Billed,2026-02-26,2026-03-12,2026-03-24,14,26.0
+DEM-000048,ORD-00082,Tech - New Age,TS - TTMS,Nimbus Foods 13,DevOps,0,External,Customer_Billed,2026-01-24,2026-02-01,2026-02-05,8,12.0
+DEM-000049,ORD-00082,Tech - New Age,TS - TTMS,Nimbus Foods 13,DevOps,1,Internal,Customer_Billed,2026-01-23,2026-01-24,2026-01-28,1,5.0
+DEM-000050,ORD-00084,Tech - Software and Gaming,TS - DAAI,Orion Mobility 14,Mulesoft,4,External,Customer_Billed,2026-01-26,2026-02-12,2026-02-22,17,27.0
+DEM-000051,ORD-00084,Tech - Software and Gaming,TS - DAAI,Orion Mobility 14,Mulesoft,1,Internal,Customer_Billed,2026-01-13,2026-01-27,2026-02-03,14,21.0
+DEM-000052,ORD-00086,Tech - Software and Gaming,TS - CIS,Orion Mobility 14,Cybersecurity,0,External,Allocated_Not_Billed,2026-01-13,2026-01-18,,5,
+DEM-000053,ORD-00086,Tech - Software and Gaming,TS - CIS,Orion Mobility 14,AI/ML,1,External,Customer_Billed,2026-01-14,2026-01-19,2026-01-20,5,6.0
+DEM-000054,ORD-00090,Health,WC - Consulting,Stratus Systems 15,Mulesoft,0,Internal,Customer_Billed,2026-01-22,2026-02-02,2026-02-08,11,17.0
+DEM-000055,ORD-00090,Health,WC - Consulting,Stratus Systems 15,Python,1,Internal,Customer_Billed,2026-01-26,2026-02-18,2026-02-27,23,32.0
+DEM-000056,ORD-00092,Health,TS - CRS,Stratus Systems 15,Data Engineering,4,External,Customer_Billed,2026-01-17,2026-01-31,2026-02-05,14,19.0
+DEM-000057,ORD-00096,Consumer,Engineering,Nova Labs 16,QA,-1,External,Allocated_Not_Billed,2026-02-06,2026-02-17,,11,
+DEM-000058,ORD-00096,Consumer,Engineering,Nova Labs 16,QA,1,Internal,Customer_Billed,2026-01-28,2026-02-13,2026-02-15,16,18.0
+DEM-000059,ORD-00096,Consumer,Engineering,Nova Labs 16,AWS,1,External,Allocated_Not_Billed,2026-01-09,2026-01-28,,19,
+DEM-000060,ORD-00098,Consumer,Engineering,Nova Labs 16,DevOps,1,Internal,Customer_Billed,2026-02-05,2026-02-27,2026-03-05,22,28.0
+DEM-000061,ORD-00104,Communications,BPS,Keystone Mobility 18,Cloud,1,Internal,Customer_Billed,2026-01-23,2026-01-27,2026-01-30,4,7.0
+DEM-000062,ORD-00109,Communications,TS - CRS,Keystone Mobility 18,Python,5,Internal,Allocated_Not_Billed,2026-01-21,2026-02-02,,12,
+DEM-000063,ORD-00112,Tech - Software and Gaming,TS - ICD,Ever Holdings 19,QA,4,Internal,Customer_Billed,2026-02-02,2026-02-17,2026-02-24,15,22.0
+DEM-000064,ORD-00113,Tech - Software and Gaming,TS - CRS,Ever Holdings 19,Java,-1,Internal,Customer_Billed,2026-01-05,2026-01-10,2026-01-16,5,11.0
+DEM-000065,ORD-00113,Tech - Software and Gaming,TS - CRS,Ever Holdings 19,AI/ML,1,Internal,Customer_Billed,2026-01-30,2026-02-17,2026-02-18,18,19.0
+DEM-000066,ORD-00113,Tech - Software and Gaming,TS - CRS,Ever Holdings 19,React/Frontend,1,Internal,Customer_Billed,2026-01-01,2026-01-16,2026-01-21,15,20.0
+DEM-000067,ORD-00128,Consumer,TS - CIS,Matrix Health 22,React/Frontend,1,External,Customer_Billed,2026-02-22,2026-03-07,2026-03-10,13,16.0
+DEM-000068,ORD-00129,Consumer,TS - ICD,Matrix Health 22,Mulesoft,2,External,Customer_Billed,2026-01-22,2026-01-28,2026-02-01,6,10.0
+DEM-000069,ORD-00133,Tech - Software and Gaming,TS - CIS,Lumina Telecom 23,AWS,0,Internal,Customer_Billed,2026-01-01,2026-01-13,2026-01-16,12,15.0
+DEM-000070,ORD-00133,Tech - Software and Gaming,TS - CIS,Lumina Telecom 23,Mulesoft,1,External,Customer_Billed,2026-01-16,2026-01-17,2026-01-18,1,2.0
+DEM-000071,ORD-00134,Tech - Software and Gaming,TS - CIS,Lumina Telecom 23,SAP,0,External,Customer_Billed,2026-01-18,2026-01-30,2026-02-05,12,18.0
+DEM-000072,ORD-00134,Tech - Software and Gaming,TS - CIS,Lumina Telecom 23,DevOps,1,Internal,Customer_Billed,2026-01-10,2026-01-26,2026-02-03,16,24.0
+DEM-000073,ORD-00136,Tech - Software and Gaming,TS - CRS,Titan Mobility 24,Data Engineering,2,External,Customer_Billed,2026-01-28,2026-02-03,2026-02-13,6,16.0
+DEM-000074,ORD-00139,Tech - New Age,TS - TTMS,Stratus Networks 25,AI/ML,1,Internal,Customer_Billed,2026-02-12,2026-02-17,2026-02-21,5,9.0
+DEM-000075,ORD-00140,Tech - New Age,TS - TTMS,Stratus Networks 25,Mulesoft,2,Internal,Customer_Billed,2026-02-12,2026-02-23,2026-03-01,11,17.0
+DEM-000076,ORD-00145,Consumer,TS - CIS,Zenith Gaming 26,Cloud,0,External,Customer_Billed,2026-02-18,2026-03-04,2026-03-09,14,19.0
+DEM-000077,ORD-00145,Consumer,TS - CIS,Zenith Gaming 26,Mulesoft,2,External,Customer_Billed,2026-02-05,2026-02-16,2026-02-17,11,12.0
+DEM-000078,ORD-00145,Consumer,TS - CIS,Zenith Gaming 26,Java,1,Internal,Customer_Billed,2026-02-14,2026-02-20,2026-02-23,6,9.0
+DEM-000079,ORD-00146,Consumer,BPS,Zenith Gaming 26,Mulesoft,3,Internal,Allocated_Not_Billed,2026-02-24,2026-03-02,,6,
+DEM-000080,ORD-00148,Consumer,BPS,Zenith Gaming 26,Azure,1,External,Customer_Billed,2026-02-15,2026-02-20,2026-02-21,5,6.0
+DEM-000081,ORD-00148,Consumer,BPS,Zenith Gaming 26,QA,1,Internal,Customer_Billed,2026-01-18,2026-01-20,2026-01-22,2,4.0
+DEM-000082,ORD-00153,Health,TS - CIS,River Health 27,AWS,3,External,Customer_Billed,2026-02-22,2026-03-04,2026-03-12,10,18.0
+DEM-000083,ORD-00154,Health,TS - CIS,River Health 27,Cybersecurity,3,External,Customer_Billed,2026-02-03,2026-02-10,2026-02-14,7,11.0
+DEM-000084,ORD-00160,Communications,TS - ICD,Synergy Logistics 28,QA,2,Internal,Allocated_Not_Billed,2026-01-18,2026-01-26,,8,
+DEM-000085,ORD-00162,Communications,TS - EA,Synergy Logistics 28,Python,-1,Internal,Customer_Billed,2026-01-06,2026-01-27,2026-02-02,21,27.0
+DEM-000086,ORD-00162,Communications,TS - EA,Synergy Logistics 28,AWS,1,Internal,Customer_Billed,2026-02-03,2026-02-20,2026-03-02,17,27.0
+DEM-000087,ORD-00162,Communications,TS - EA,Synergy Logistics 28,SAP,1,External,Customer_Billed,2026-01-20,2026-02-04,2026-02-15,15,26.0
+DEM-000088,ORD-00166,Communications,TS - DAAI,Synergy Logistics 28,Cloud,5,Internal,Customer_Billed,2026-01-17,2026-02-05,2026-02-12,19,26.0
+DEM-000089,ORD-00170,Communications,TS - CIS,Crown Consulting 29,Cybersecurity,1,External,Allocated_Not_Billed,2026-02-01,2026-02-15,,14,
+DEM-000090,ORD-00171,Communications,Engineering,Crown Consulting 29,Data Engineering,0,External,Customer_Billed,2026-01-01,2026-01-21,2026-01-22,20,21.0
+DEM-000091,ORD-00171,Communications,Engineering,Crown Consulting 29,SAP,1,Internal,Allocated_Not_Billed,2026-01-31,2026-02-08,,8,
+DEM-000092,ORD-00173,Tech - New Age,BPS,Jade Telecom 30,Data Engineering,2,External,Customer_Billed,2026-01-19,2026-01-22,2026-02-01,3,13.0
+DEM-000093,ORD-00174,Tech - New Age,BPS,Jade Telecom 30,DevOps,0,Internal,Allocated_Not_Billed,2026-02-02,2026-02-05,,3,
+DEM-000094,ORD-00174,Tech - New Age,BPS,Jade Telecom 30,AI/ML,3,Internal,Customer_Billed,2026-02-19,2026-02-27,2026-03-03,8,12.0
+DEM-000095,ORD-00177,Tech - New Age,TS - CRS,Jade Telecom 30,Java,1,Internal,Customer_Billed,2026-01-30,2026-02-08,2026-02-09,9,10.0
+DEM-000096,ORD-00179,Tech - New Age,TS - ICD,Jade Telecom 30,Cybersecurity,1,Internal,Allocated_Not_Billed,2026-01-10,2026-01-15,,5,
+DEM-000097,ORD-00179,Tech - New Age,TS - ICD,Jade Telecom 30,Data Engineering,1,External,Customer_Billed,2026-01-23,2026-02-03,2026-02-07,11,15.0
+DEM-000098,ORD-00180,Tech - New Age,TS - ICD,Jade Telecom 30,Python,2,Internal,Customer_Billed,2026-01-06,2026-01-22,2026-01-30,16,24.0
+DEM-000099,ORD-00182,Tech - New Age,WC - Consulting,Summit Holdings 31,Azure,0,Internal,Customer_Billed,2026-01-03,2026-01-17,2026-01-29,14,26.0
+DEM-000100,ORD-00182,Tech - New Age,WC - Consulting,Summit Holdings 31,Cloud,1,Internal,Customer_Billed,2026-01-24,2026-02-08,2026-02-17,15,24.0
+DEM-000101,ORD-00182,Tech - New Age,WC - Consulting,Summit Holdings 31,QA,1,External,Customer_Billed,2026-01-29,2026-02-08,2026-02-16,10,18.0
+DEM-000102,ORD-00185,Tech - New Age,TS - DAAI,Summit Holdings 31,AWS,3,External,Customer_Billed,2026-01-20,2026-02-10,2026-02-19,21,30.0
+DEM-000103,ORD-00189,Consumer,TS - CIS,Blue Foods 33,React/Frontend,-1,Internal,Customer_Billed,2026-02-07,2026-02-11,2026-02-14,4,7.0
+DEM-000104,ORD-00189,Consumer,TS - CIS,Blue Foods 33,Java,1,Internal,Customer_Billed,2026-01-01,2026-01-15,2026-01-22,14,21.0
+DEM-000105,ORD-00189,Consumer,TS - CIS,Blue Foods 33,Java,1,External,Customer_Billed,2026-01-31,2026-02-06,2026-02-13,6,13.0
+DEM-000106,ORD-00190,Consumer,TS - CIS,Blue Foods 33,Cybersecurity,0,Internal,Customer_Billed,2026-01-18,2026-02-02,2026-02-14,15,27.0
+DEM-000107,ORD-00190,Consumer,TS - CIS,Blue Foods 33,Python,1,External,Customer_Billed,2026-02-08,2026-02-19,2026-02-25,11,17.0
+DEM-000108,ORD-00191,Consumer,BPS,Blue Foods 33,AI/ML,-1,External,Customer_Billed,2026-01-01,2026-01-06,2026-01-10,5,9.0
+DEM-000109,ORD-00191,Consumer,BPS,Blue Foods 33,Azure,1,Internal,Customer_Billed,2026-01-05,2026-01-10,2026-01-13,5,8.0
+DEM-000110,ORD-00191,Consumer,BPS,Blue Foods 33,Cybersecurity,1,External,Allocated_Not_Billed,2026-01-20,2026-01-24,,4,
+DEM-000111,ORD-00192,Consumer,BPS,Blue Foods 33,Cloud,1,Internal,Customer_Billed,2026-01-30,2026-02-05,2026-02-07,6,8.0
+DEM-000112,ORD-00192,Consumer,BPS,Blue Foods 33,Data Engineering,2,External,Allocated_Not_Billed,2026-01-17,2026-02-03,,17,
+DEM-000113,ORD-00192,Consumer,BPS,Blue Foods 33,Salesforce,1,Internal,Customer_Billed,2026-01-01,2026-01-02,2026-01-07,1,6.0
+DEM-000114,ORD-00193,Consumer,TS - CRS,Blue Foods 33,React/Frontend,4,Internal,Customer_Billed,2026-02-24,2026-03-07,2026-03-11,11,15.0
+DEM-000115,ORD-00195,Consumer,TS - TTMS,Blue Foods 33,QA,1,External,Customer_Billed,2026-01-09,2026-01-14,2026-01-20,5,11.0
+DEM-000116,ORD-00195,Consumer,TS - TTMS,Blue Foods 33,DevOps,1,Internal,Customer_Billed,2026-01-18,2026-01-19,2026-01-24,1,6.0
+DEM-000117,ORD-00197,Health,TS - DAAI,Nova Capital 34,Cybersecurity,2,External,Customer_Billed,2026-02-22,2026-03-13,2026-03-18,19,24.0
+DEM-000118,ORD-00197,Health,TS - DAAI,Nova Capital 34,Cloud,1,External,Customer_Billed,2026-01-26,2026-02-22,2026-03-05,27,38.0
+DEM-000119,ORD-00202,Health,BPS,Nova Capital 34,QA,1,Internal,Customer_Billed,2026-01-21,2026-01-29,2026-01-30,8,9.0
+DEM-000120,ORD-00208,Health,TS - CRS,Crown Foods 35,Azure,-1,Internal,Customer_Billed,2026-03-18,2026-03-23,2026-03-30,5,12.0
+DEM-000121,ORD-00208,Health,TS - CRS,Crown Foods 35,Mulesoft,1,Internal,Customer_Billed,2026-01-07,2026-01-19,2026-01-25,12,18.0
+DEM-000122,ORD-00208,Health,TS - CRS,Crown Foods 35,QA,2,Internal,Customer_Billed,2026-03-02,2026-03-16,2026-03-27,14,25.0
+DEM-000123,ORD-00209,Health,TS - CRS,Crown Foods 35,SAP,2,External,Allocated_Not_Billed,2026-02-03,2026-02-16,,13,
+DEM-000124,ORD-00211,Health,BPS,Crown Foods 35,React/Frontend,0,Internal,Customer_Billed,2026-02-01,2026-02-08,2026-02-09,7,8.0
+DEM-000125,ORD-00211,Health,BPS,Crown Foods 35,DevOps,1,Internal,Allocated_Not_Billed,2026-02-28,2026-03-08,,8,
+DEM-000126,ORD-00212,Health,BPS,Crown Foods 35,Cybersecurity,1,External,Customer_Billed,2026-01-23,2026-01-25,2026-01-30,2,7.0
+DEM-000127,ORD-00212,Health,BPS,Crown Foods 35,React/Frontend,4,External,Customer_Billed,2026-02-14,2026-02-24,2026-02-28,10,14.0
+DEM-000128,ORD-00223,Communications,BPS,Matrix Mobility 37,QA,3,Internal,Allocated_Not_Billed,2026-01-18,2026-01-24,,6,
+DEM-000129,ORD-00223,Communications,BPS,Matrix Mobility 37,AI/ML,1,Internal,Customer_Billed,2026-02-05,2026-02-15,2026-02-19,10,14.0
+DEM-000130,ORD-00227,Communications,TS - DAAI,Matrix Mobility 37,Azure,-1,External,Customer_Billed,2026-01-31,2026-02-25,2026-03-04,25,32.0
+DEM-000131,ORD-00227,Communications,TS - DAAI,Matrix Mobility 37,Java,1,Internal,Customer_Billed,2026-01-29,2026-02-12,2026-02-24,14,26.0
+DEM-000132,ORD-00227,Communications,TS - DAAI,Matrix Mobility 37,Azure,1,Internal,Customer_Billed,2026-01-01,2026-01-27,2026-02-08,26,38.0
+DEM-000133,ORD-00228,Communications,TS - DAAI,Matrix Mobility 37,QA,0,Internal,Customer_Billed,2026-02-12,2026-03-06,2026-03-17,22,33.0
+DEM-000134,ORD-00228,Communications,TS - DAAI,Matrix Mobility 37,Salesforce,1,Internal,Customer_Billed,2026-01-30,2026-02-20,2026-02-27,21,28.0
+DEM-000135,ORD-00229,Communications,Engineering,Matrix Mobility 37,Python,6,External,Customer_Billed,2026-01-03,2026-01-20,2026-01-30,17,27.0
+DEM-000136,ORD-00231,Communications,Engineering,Matrix Mobility 37,SAP,1,Internal,Customer_Billed,2026-02-18,2026-02-25,2026-03-03,7,13.0
+DEM-000137,ORD-00240,Consumer,TS - CIS,Falcon Telecom 39,AI/ML,7,Internal,Customer_Billed,2026-03-13,2026-03-17,2026-03-23,4,10.0
+DEM-000138,ORD-00250,Tech - New Age,TS - CIS,Titan Labs 43,Java,3,External,Customer_Billed,2026-01-26,2026-01-27,2026-01-30,1,4.0
+DEM-000139,ORD-00250,Tech - New Age,TS - CIS,Titan Labs 43,AWS,2,Internal,Customer_Billed,2026-02-09,2026-02-19,2026-02-26,10,17.0
+DEM-000140,ORD-00252,Tech - New Age,TS - CRS,Titan Labs 43,Data Engineering,-1,Internal,Customer_Billed,2026-01-14,2026-01-28,2026-02-01,14,18.0
+DEM-000141,ORD-00252,Tech - New Age,TS - CRS,Titan Labs 43,GCP,1,External,Customer_Billed,2026-01-16,2026-01-25,2026-02-02,9,17.0
+DEM-000142,ORD-00252,Tech - New Age,TS - CRS,Titan Labs 43,SAP,1,Internal,Customer_Billed,2026-01-23,2026-02-01,2026-02-04,9,12.0
+DEM-000143,ORD-00254,Tech - New Age,Engineering,Titan Labs 43,Salesforce,1,Internal,Customer_Billed,2026-01-01,2026-01-16,2026-01-23,15,22.0
+DEM-000144,ORD-00254,Tech - New Age,Engineering,Titan Labs 43,QA,1,Internal,Customer_Billed,2026-01-28,2026-02-13,2026-02-21,16,24.0
+DEM-000145,ORD-00254,Tech - New Age,Engineering,Titan Labs 43,AI/ML,3,External,Customer_Billed,2026-01-27,2026-02-12,2026-02-17,16,21.0
+DEM-000146,ORD-00256,Consumer,TS - CIS,River Foods 44,Java,1,External,Allocated_Not_Billed,2026-01-07,2026-01-16,,9,
+DEM-000147,ORD-00256,Consumer,TS - CIS,River Foods 44,Cybersecurity,1,Internal,Customer_Billed,2026-01-01,2026-01-13,2026-01-20,12,19.0
+DEM-000148,ORD-00256,Consumer,TS - CIS,River Foods 44,Cybersecurity,2,Internal,Customer_Billed,2026-01-08,2026-01-14,2026-01-21,6,13.0
+DEM-000149,ORD-00258,Consumer,TS - ICD,River Foods 44,SAP,1,External,Customer_Billed,2026-02-02,2026-02-05,2026-02-16,3,14.0
+DEM-000150,ORD-00258,Consumer,TS - ICD,River Foods 44,Cloud,1,Internal,Customer_Billed,2026-02-12,2026-02-26,2026-02-27,14,15.0
+DEM-000151,ORD-00258,Consumer,TS - ICD,River Foods 44,QA,1,Internal,Customer_Billed,2026-01-08,2026-01-09,2026-01-12,1,4.0
+DEM-000152,ORD-00260,Consumer,TS - ICD,River Foods 44,SAP,1,External,Customer_Billed,2026-02-03,2026-02-09,2026-02-13,6,10.0
+DEM-000153,ORD-00263,Tech - Software and Gaming,TS - TTMS,Falcon Gaming 45,Java,2,External,Allocated_Not_Billed,2026-01-01,2026-01-06,,5,
+DEM-000154,ORD-00263,Tech - Software and Gaming,TS - TTMS,Falcon Gaming 45,Data Engineering,1,Internal,Customer_Billed,2026-01-25,2026-02-02,2026-02-08,8,14.0
+DEM-000155,ORD-00264,Tech - Software and Gaming,TS - CRS,Falcon Gaming 45,React/Frontend,1,External,Customer_Billed,2026-02-07,2026-02-17,2026-02-24,10,17.0
+DEM-000156,ORD-00264,Tech - Software and Gaming,TS - CRS,Falcon Gaming 45,React/Frontend,2,External,Customer_Billed,2026-02-01,2026-02-16,2026-02-20,15,19.0
+DEM-000157,ORD-00264,Tech - Software and Gaming,TS - CRS,Falcon Gaming 45,Data Engineering,5,Internal,Customer_Billed,2026-01-25,2026-02-04,2026-02-14,10,20.0
+DEM-000158,ORD-00265,Tech - Software and Gaming,TS - CRS,Falcon Gaming 45,React/Frontend,-1,External,Customer_Billed,2026-02-23,2026-03-01,2026-03-07,6,12.0
+DEM-000159,ORD-00265,Tech - Software and Gaming,TS - CRS,Falcon Gaming 45,Java,1,Internal,Allocated_Not_Billed,2026-02-23,2026-03-13,,18,
+DEM-000160,ORD-00265,Tech - Software and Gaming,TS - CRS,Falcon Gaming 45,Data Engineering,1,Internal,Customer_Billed,2026-02-04,2026-02-17,2026-02-22,13,18.0
+DEM-000161,ORD-00267,Tech - Software and Gaming,Engineering,Falcon Gaming 45,Python,0,External,Customer_Billed,2026-01-21,2026-02-06,2026-02-11,16,21.0
+DEM-000162,ORD-00267,Tech - Software and Gaming,Engineering,Falcon Gaming 45,QA,5,Internal,Customer_Billed,2026-02-20,2026-02-27,2026-03-05,7,13.0
+DEM-000163,ORD-00269,Tech - Software and Gaming,WC - Consulting,Falcon Gaming 45,SAP,0,Internal,Customer_Billed,2026-01-31,2026-02-15,2026-02-26,15,26.0
+DEM-000164,ORD-00269,Tech - Software and Gaming,WC - Consulting,Falcon Gaming 45,SAP,1,External,Allocated_Not_Billed,2026-01-01,2026-01-13,,12,
+DEM-000165,ORD-00269,Tech - Software and Gaming,WC - Consulting,Falcon Gaming 45,Python,1,External,Allocated_Not_Billed,2026-01-15,2026-01-31,,16,

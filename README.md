@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# COO Ops Cockpit (Next.js 16)
 
-## Getting Started
+Demo-grade COO operations dashboard for quarterly revenue attainment via BPM conversion.
 
-First, run the development server:
+## Stack
+- Next.js 16 App Router + TypeScript
+- Tailwind CSS
+- Recharts
+- In-app deterministic mock API (route handlers)
 
+## Run
 ```bash
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Azure OpenAI (Leadership Chat)
+Leadership chat can use Azure OpenAI when these env vars are set:
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+- `AZURE_OPENAI_ENDPOINT` (example `https://<resource>.openai.azure.com`)
+- `AZURE_OPENAI_API_KEY`
+- `AZURE_OPENAI_DEPLOYMENT` (your chat model deployment name)
+- `AZURE_OPENAI_API_VERSION` (optional, default `2024-10-21`)
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+Behavior:
+- If Azure OpenAI env vars are present, `/api/leadership-chat` calls Azure OpenAI.
+- If not configured (or Azure call fails), it falls back to local rule-based responses.
 
-## Learn More
+## Routes
+- `/` Executive Overview
+- `/diagnostics` Why / Why Not diagnostic decomposition
+- `/planning` Next quarter forecast with scenario multipliers
+- `/actions` Action Center + what-if simulator
+- `/slices` Sector x Service Line matrix drilldown
+- `/accounts` Leaderboard and top/bottom lists
+- `/accounts/[id]` Account narrative and demand details
 
-To learn more about Next.js, take a look at the following resources:
+## Core calculations
+- `QTD` = quarter-to-date as of system date (or `todayOverride` in config).
+- `Forecast Revenue` = `QTD Actual Revenue / elapsed_quarter_ratio`.
+- `Sold BPM` = `Sold Revenue / blended_rate_usd_per_bpm` (dominant service line for filtered slice).
+- `Actual BPM (Net)` = `RU BPM QTD - RD BPM QTD`.
+- `RU` = billed starts in quarter.
+- `RD` = prior-period billed resources ending/reducing in quarter.
+- `Forecast BPM` = `Forecast Revenue / blended rate`.
+- `Demand Open BPM` = open demand quantity prorated by remaining billable days (30-day BPM month).
+- `TTF` = `demand_start_date -> billable_start_date` (or `TTF_so_far` if not billed).
+- `TTF breach` = `TTF > historical_avg_service_line + ttf_threshold_days`.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+## Config
+Edit [`config.ts`](./config.ts):
+- `sectors`
+- `serviceLines`
+- `blendedRateByServiceLine`
+- `ttfThresholdDays` (default 7)
+- `pipelineConversionRates` (global + by service line)
+- `todayOverride`
+- `revenueTargetUsdByQuarter`
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Data model
+Typed models are in [`lib/models.ts`](./lib/models.ts).
+Deterministic seeded generator is in [`lib/data.ts`](./lib/data.ts).
+Metrics engine is in [`lib/metrics.ts`](./lib/metrics.ts).
+Assistant engine is in [`lib/assistant.ts`](./lib/assistant.ts).
 
-## Deploy on Vercel
+## Assistant behavior
+The right-side COO Assistant is rule-based:
+- fuzzy intent matching (target, diagnostics, planning, actions, TTF)
+- returns short answer, driver bullets, deep links, and recommended actions
+- no external LLM dependency
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Operational drillability
+All major gap views are connected to contributors through:
+- account leaderboard links
+- diagnostics sections
+- action deep links
+- matrix and account drilldowns
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+## Mock API endpoints
+- `GET /api/dashboard`
+- `POST /api/assistant`
+- `GET /api/account/[id]`

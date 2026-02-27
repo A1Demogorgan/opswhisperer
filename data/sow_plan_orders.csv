@@ -1,0 +1,271 @@
+order_id,sector,service_line,account,sow_type,total_people_planned,people_this_quarter,people_next_quarter,people_q_plus_2,people_q_plus_3
+ORD-00001,Tech - New Age,TS - EA,Umbra Health 01,Existing Project,5,0,2,3,0
+ORD-00002,Tech - New Age,TS - EA,Umbra Health 01,Existing Project,5,2,0,1,2
+ORD-00003,Tech - New Age,TS - EA,Umbra Health 01,Net New,5,2,0,2,1
+ORD-00004,Tech - New Age,TS - DAAI,Umbra Health 01,Existing Project,5,1,1,2,1
+ORD-00005,Tech - New Age,WC - Consulting,Umbra Health 01,Existing Project,8,4,2,1,1
+ORD-00006,Tech - New Age,WC - Consulting,Umbra Health 01,Existing Project,5,0,2,2,1
+ORD-00007,Tech - New Age,WC - Consulting,Umbra Health 01,Existing Project,5,1,0,4,0
+ORD-00008,Health,TS - CIS,Apex Mobility 02,Existing Project,5,2,2,0,1
+ORD-00009,Health,TS - CIS,Apex Mobility 02,Existing Project,5,0,1,2,2
+ORD-00010,Health,TS - CIS,Apex Mobility 02,Existing Project,9,2,2,1,4
+ORD-00011,Health,TS - CRS,Apex Mobility 02,Incremental,5,2,1,1,1
+ORD-00012,Health,Engineering,Apex Mobility 02,Incremental,5,1,3,1,0
+ORD-00013,Health,Engineering,Apex Mobility 02,Incremental,5,0,1,3,1
+ORD-00014,Health,WC - Consulting,Apex Mobility 02,Incremental,11,6,3,1,1
+ORD-00015,Health,WC - Consulting,Apex Mobility 02,Existing Project,15,5,3,4,3
+ORD-00016,Health,WC - Consulting,Apex Mobility 02,Incremental,5,0,2,3,0
+ORD-00017,Tech - Software and Gaming,Engineering,Horizon Foods 03,Incremental,14,3,4,2,5
+ORD-00018,Tech - Software and Gaming,Engineering,Horizon Foods 03,Incremental,7,4,1,1,1
+ORD-00019,Tech - Software and Gaming,TS - EA,Horizon Foods 03,Net New,8,0,2,1,5
+ORD-00020,Tech - Software and Gaming,TS - EA,Horizon Foods 03,Existing Project,6,2,2,1,1
+ORD-00021,Tech - Software and Gaming,TS - ICD,Horizon Foods 03,Existing Project,12,4,2,4,2
+ORD-00022,Tech - Software and Gaming,TS - ICD,Horizon Foods 03,Incremental,10,2,5,1,2
+ORD-00023,Tech - Software and Gaming,TS - ICD,Horizon Foods 03,Existing Project,6,0,1,4,1
+ORD-00024,Tech - New Age,TS - CIS,Ever Health 04,Existing Project,28,12,4,5,7
+ORD-00025,Tech - New Age,WC - Consulting,Ever Health 04,Existing Project,7,3,2,1,1
+ORD-00026,Tech - New Age,WC - Consulting,Ever Health 04,Existing Project,45,10,0,24,11
+ORD-00027,Tech - New Age,WC - Consulting,Ever Health 04,Existing Project,20,4,12,2,2
+ORD-00028,Tech - New Age,TS - EA,Ever Health 04,Net New,18,4,7,2,5
+ORD-00029,Tech - New Age,TS - TTMS,Ever Health 04,Existing Project,7,2,2,2,1
+ORD-00030,Tech - New Age,TS - TTMS,Ever Health 04,Existing Project,15,9,0,5,1
+ORD-00031,Tech - New Age,TS - TTMS,Ever Health 04,Existing Project,18,11,5,1,1
+ORD-00032,Communications,TS - TTMS,Vertex Consulting 05,Existing Project,5,1,2,2,0
+ORD-00033,Communications,TS - TTMS,Vertex Consulting 05,Existing Project,9,2,1,1,5
+ORD-00034,Communications,TS - ICD,Vertex Consulting 05,Existing Project,5,0,2,1,2
+ORD-00035,Tech - Software and Gaming,TS - ICD,Crown Software 06,Existing Project,5,-1,1,2,3
+ORD-00036,Tech - Software and Gaming,TS - ICD,Crown Software 06,Existing Project,25,11,5,6,3
+ORD-00037,Tech - Software and Gaming,TS - ICD,Crown Software 06,Net New,19,3,5,10,1
+ORD-00038,Tech - Software and Gaming,TS - DAAI,Crown Software 06,Incremental,9,3,2,3,1
+ORD-00039,Tech - Software and Gaming,TS - CIS,Crown Software 06,Existing Project,14,7,2,2,3
+ORD-00040,Tech - Software and Gaming,TS - EA,Crown Software 06,Existing Project,35,12,17,5,1
+ORD-00041,Tech - Software and Gaming,TS - EA,Crown Software 06,Existing Project,11,6,2,2,1
+ORD-00042,Tech - New Age,TS - EA,Blue Systems 07,Existing Project,6,0,2,2,2
+ORD-00043,Tech - New Age,TS - EA,Blue Systems 07,Existing Project,5,2,2,1,0
+ORD-00044,Tech - New Age,TS - EA,Blue Systems 07,Incremental,9,2,2,3,2
+ORD-00045,Tech - New Age,Engineering,Blue Systems 07,Existing Project,5,2,0,1,2
+ORD-00046,Tech - New Age,Engineering,Blue Systems 07,Incremental,8,1,3,2,2
+ORD-00047,Tech - New Age,Engineering,Blue Systems 07,Existing Project,45,11,3,5,26
+ORD-00048,Tech - New Age,TS - CRS,Blue Systems 07,Incremental,5,2,2,1,0
+ORD-00049,Tech - New Age,TS - CRS,Blue Systems 07,Incremental,6,0,3,2,1
+ORD-00050,Tech - New Age,TS - CRS,Blue Systems 07,Incremental,10,2,3,1,4
+ORD-00051,Tech - New Age,TS - CIS,Blue Systems 07,Net New,9,3,1,4,1
+ORD-00052,Tech - New Age,TS - CIS,Blue Systems 07,Existing Project,5,1,3,0,1
+ORD-00053,Tech - New Age,TS - DAAI,Crown Holdings 08,Existing Project,23,10,3,3,7
+ORD-00054,Tech - New Age,WC - Consulting,Crown Holdings 08,Existing Project,15,4,2,7,2
+ORD-00055,Tech - New Age,WC - Consulting,Crown Holdings 08,Existing Project,5,1,2,1,1
+ORD-00056,Tech - New Age,WC - Consulting,Crown Holdings 08,Existing Project,6,2,1,2,1
+ORD-00057,Communications,Engineering,Horizon Aerospace 09,Incremental,11,2,2,5,2
+ORD-00058,Communications,WC - Consulting,Horizon Aerospace 09,Existing Project,10,4,3,3,0
+ORD-00059,Communications,WC - Consulting,Horizon Aerospace 09,Net New,7,1,1,3,2
+ORD-00060,Health,TS - EA,Titan Systems 10,Incremental,5,2,3,0,0
+ORD-00061,Health,TS - EA,Titan Systems 10,Incremental,14,2,8,3,1
+ORD-00062,Health,Engineering,Titan Systems 10,Existing Project,12,3,3,4,2
+ORD-00063,Health,TS - CRS,Titan Systems 10,Net New,8,1,3,1,3
+ORD-00064,Health,TS - CRS,Titan Systems 10,Existing Project,5,2,1,2,0
+ORD-00065,Health,TS - CRS,Titan Systems 10,Existing Project,11,2,6,1,2
+ORD-00066,Health,TS - CIS,River Holdings 11,Existing Project,7,4,1,0,2
+ORD-00067,Health,TS - CIS,River Holdings 11,Existing Project,6,2,0,1,3
+ORD-00068,Health,WC - Consulting,River Holdings 11,Existing Project,21,1,7,6,7
+ORD-00069,Health,WC - Consulting,River Holdings 11,Existing Project,5,1,2,1,1
+ORD-00070,Health,TS - EA,River Holdings 11,Existing Project,5,2,2,1,0
+ORD-00071,Health,TS - EA,River Holdings 11,Existing Project,10,2,2,3,3
+ORD-00072,Health,TS - EA,River Holdings 11,Net New,5,2,0,2,1
+ORD-00073,Tech - Software and Gaming,TS - CRS,Willow Consulting 12,Existing Project,5,1,1,2,1
+ORD-00074,Tech - Software and Gaming,TS - CRS,Willow Consulting 12,Existing Project,5,0,3,1,1
+ORD-00075,Tech - Software and Gaming,TS - ICD,Willow Consulting 12,Net New,9,3,3,2,1
+ORD-00076,Tech - New Age,WC - Consulting,Nimbus Foods 13,Existing Project,16,2,7,4,3
+ORD-00077,Tech - New Age,WC - Consulting,Nimbus Foods 13,Existing Project,5,4,0,0,1
+ORD-00078,Tech - New Age,TS - EA,Nimbus Foods 13,Existing Project,5,2,1,1,1
+ORD-00079,Tech - New Age,TS - EA,Nimbus Foods 13,Net New,5,1,1,2,1
+ORD-00080,Tech - New Age,TS - DAAI,Nimbus Foods 13,Existing Project,8,2,4,1,1
+ORD-00081,Tech - New Age,TS - TTMS,Nimbus Foods 13,Existing Project,5,0,1,2,2
+ORD-00082,Tech - New Age,TS - TTMS,Nimbus Foods 13,Incremental,6,1,1,3,1
+ORD-00083,Tech - New Age,TS - TTMS,Nimbus Foods 13,Existing Project,19,11,4,3,1
+ORD-00084,Tech - Software and Gaming,TS - DAAI,Orion Mobility 14,Incremental,14,5,2,5,2
+ORD-00085,Tech - Software and Gaming,TS - CIS,Orion Mobility 14,Incremental,5,0,3,2,0
+ORD-00086,Tech - Software and Gaming,TS - CIS,Orion Mobility 14,Incremental,5,1,1,2,1
+ORD-00087,Tech - Software and Gaming,TS - CIS,Orion Mobility 14,Existing Project,5,2,1,1,1
+ORD-00088,Health,BPS,Stratus Systems 15,Existing Project,6,4,1,0,1
+ORD-00089,Health,BPS,Stratus Systems 15,Existing Project,6,3,1,2,0
+ORD-00090,Health,WC - Consulting,Stratus Systems 15,Incremental,10,1,2,6,1
+ORD-00091,Health,TS - CRS,Stratus Systems 15,Existing Project,8,3,1,2,2
+ORD-00092,Health,TS - CRS,Stratus Systems 15,Net New,22,4,8,4,6
+ORD-00093,Consumer,BPS,Nova Labs 16,Existing Project,5,2,0,1,2
+ORD-00094,Consumer,BPS,Nova Labs 16,Existing Project,11,4,1,5,1
+ORD-00095,Consumer,BPS,Nova Labs 16,Existing Project,10,2,1,6,1
+ORD-00096,Consumer,Engineering,Nova Labs 16,Incremental,5,1,1,2,1
+ORD-00097,Consumer,Engineering,Nova Labs 16,Existing Project,5,3,1,0,1
+ORD-00098,Consumer,Engineering,Nova Labs 16,Incremental,5,1,0,0,4
+ORD-00099,Health - UHG,TS - EA,Willow Software 17,Existing Project,5,0,2,2,1
+ORD-00100,Health - UHG,TS - EA,Willow Software 17,Existing Project,25,2,16,3,4
+ORD-00101,Health - UHG,TS - EA,Willow Software 17,Existing Project,11,4,3,2,2
+ORD-00102,Health - UHG,TS - CRS,Willow Software 17,Incremental,5,0,2,3,0
+ORD-00103,Communications,TS - CIS,Keystone Mobility 18,Existing Project,6,3,1,1,1
+ORD-00104,Communications,BPS,Keystone Mobility 18,Incremental,5,1,2,1,1
+ORD-00105,Communications,BPS,Keystone Mobility 18,Existing Project,15,8,2,1,4
+ORD-00106,Communications,BPS,Keystone Mobility 18,Existing Project,7,1,3,1,2
+ORD-00107,Communications,TS - EA,Keystone Mobility 18,Existing Project,15,5,6,1,3
+ORD-00108,Communications,TS - CRS,Keystone Mobility 18,Existing Project,8,1,2,3,2
+ORD-00109,Communications,TS - CRS,Keystone Mobility 18,Incremental,16,5,9,2,0
+ORD-00110,Communications,TS - CRS,Keystone Mobility 18,Existing Project,7,1,1,4,1
+ORD-00111,Tech - Software and Gaming,TS - ICD,Ever Holdings 19,Existing Project,7,2,2,1,2
+ORD-00112,Tech - Software and Gaming,TS - ICD,Ever Holdings 19,Incremental,9,4,1,1,3
+ORD-00113,Tech - Software and Gaming,TS - CRS,Ever Holdings 19,Incremental,24,1,7,12,4
+ORD-00114,Tech - Software and Gaming,TS - CRS,Ever Holdings 19,Existing Project,8,3,1,3,1
+ORD-00115,Tech - Software and Gaming,TS - CRS,Ever Holdings 19,Existing Project,6,1,3,1,1
+ORD-00116,Tech - Software and Gaming,Engineering,Ever Holdings 19,Existing Project,28,6,5,6,11
+ORD-00117,Tech - Software and Gaming,WC - Consulting,Ever Holdings 19,Existing Project,24,10,7,5,2
+ORD-00118,Tech - Software and Gaming,WC - Consulting,Ever Holdings 19,Incremental,5,0,3,1,1
+ORD-00119,Health - UHG,WC - Consulting,Nova Energy 20,Existing Project,7,3,1,1,2
+ORD-00120,Health - UHG,WC - Consulting,Nova Energy 20,Existing Project,6,1,2,2,1
+ORD-00121,Health - UHG,WC - Consulting,Nova Energy 20,Existing Project,15,6,5,2,2
+ORD-00122,Health - UHG,TS - EA,Nova Energy 20,Existing Project,11,3,1,5,2
+ORD-00123,Tech - New Age,TS - TTMS,Delta Retail 21,Existing Project,6,4,0,0,2
+ORD-00124,Tech - New Age,TS - CIS,Delta Retail 21,Existing Project,5,2,1,1,1
+ORD-00125,Tech - New Age,TS - CIS,Delta Retail 21,Existing Project,10,6,1,2,1
+ORD-00126,Consumer,TS - EA,Matrix Health 22,Existing Project,9,5,2,2,0
+ORD-00127,Consumer,TS - EA,Matrix Health 22,Existing Project,9,3,3,0,3
+ORD-00128,Consumer,TS - CIS,Matrix Health 22,Net New,19,1,2,5,11
+ORD-00129,Consumer,TS - ICD,Matrix Health 22,Incremental,9,2,2,5,0
+ORD-00130,Consumer,TS - ICD,Matrix Health 22,Existing Project,5,2,1,0,2
+ORD-00131,Consumer,TS - ICD,Matrix Health 22,Existing Project,17,1,4,5,7
+ORD-00132,Tech - Software and Gaming,TS - CRS,Lumina Telecom 23,Existing Project,10,3,1,3,3
+ORD-00133,Tech - Software and Gaming,TS - CIS,Lumina Telecom 23,Incremental,5,1,3,1,0
+ORD-00134,Tech - Software and Gaming,TS - CIS,Lumina Telecom 23,Incremental,5,1,2,1,1
+ORD-00135,Tech - Software and Gaming,TS - TTMS,Titan Mobility 24,Existing Project,15,4,4,4,3
+ORD-00136,Tech - Software and Gaming,TS - CRS,Titan Mobility 24,Incremental,9,2,0,6,1
+ORD-00137,Tech - Software and Gaming,TS - CRS,Titan Mobility 24,Existing Project,5,1,1,2,1
+ORD-00138,Tech - New Age,TS - TTMS,Stratus Networks 25,Existing Project,28,6,4,12,6
+ORD-00139,Tech - New Age,TS - TTMS,Stratus Networks 25,Incremental,7,1,3,3,0
+ORD-00140,Tech - New Age,TS - TTMS,Stratus Networks 25,Net New,5,2,2,1,0
+ORD-00141,Tech - New Age,TS - DAAI,Stratus Networks 25,Existing Project,11,6,2,2,1
+ORD-00142,Tech - New Age,TS - DAAI,Stratus Networks 25,Existing Project,25,9,1,10,5
+ORD-00143,Consumer,TS - TTMS,Zenith Gaming 26,Existing Project,21,6,1,6,8
+ORD-00144,Consumer,TS - TTMS,Zenith Gaming 26,Existing Project,33,14,2,5,12
+ORD-00145,Consumer,TS - CIS,Zenith Gaming 26,Net New,17,3,2,3,9
+ORD-00146,Consumer,BPS,Zenith Gaming 26,Net New,20,3,5,7,5
+ORD-00147,Consumer,BPS,Zenith Gaming 26,Existing Project,29,12,9,7,1
+ORD-00148,Consumer,BPS,Zenith Gaming 26,Incremental,14,2,4,6,2
+ORD-00149,Consumer,TS - ICD,Zenith Gaming 26,Existing Project,16,10,3,1,2
+ORD-00150,Consumer,TS - ICD,Zenith Gaming 26,Existing Project,17,4,3,3,7
+ORD-00151,Consumer,TS - ICD,Zenith Gaming 26,Existing Project,26,12,2,11,1
+ORD-00152,Health,TS - CIS,River Health 27,Existing Project,6,4,0,1,1
+ORD-00153,Health,TS - CIS,River Health 27,Net New,14,3,2,8,1
+ORD-00154,Health,TS - CIS,River Health 27,Net New,10,3,1,4,2
+ORD-00155,Health,TS - ICD,River Health 27,Existing Project,13,2,5,2,4
+ORD-00156,Health,TS - ICD,River Health 27,Existing Project,5,2,2,0,1
+ORD-00157,Health,TS - ICD,River Health 27,Existing Project,7,1,3,1,2
+ORD-00158,Health,BPS,River Health 27,Existing Project,6,0,1,2,3
+ORD-00159,Communications,TS - ICD,Synergy Logistics 28,Existing Project,6,0,1,3,2
+ORD-00160,Communications,TS - ICD,Synergy Logistics 28,Incremental,5,2,2,0,1
+ORD-00161,Communications,TS - EA,Synergy Logistics 28,Existing Project,5,2,1,2,0
+ORD-00162,Communications,TS - EA,Synergy Logistics 28,Incremental,5,1,2,1,1
+ORD-00163,Communications,TS - EA,Synergy Logistics 28,Existing Project,5,1,2,1,1
+ORD-00164,Communications,TS - CRS,Synergy Logistics 28,Existing Project,5,1,1,3,0
+ORD-00165,Communications,TS - CRS,Synergy Logistics 28,Existing Project,5,3,0,1,1
+ORD-00166,Communications,TS - DAAI,Synergy Logistics 28,Incremental,7,5,2,0,0
+ORD-00167,Communications,TS - DAAI,Synergy Logistics 28,Net New,10,0,6,4,0
+ORD-00168,Communications,TS - DAAI,Synergy Logistics 28,Existing Project,10,3,3,4,0
+ORD-00169,Communications,TS - EA,Crown Consulting 29,Existing Project,19,3,9,1,6
+ORD-00170,Communications,TS - CIS,Crown Consulting 29,Net New,5,1,1,1,2
+ORD-00171,Communications,Engineering,Crown Consulting 29,Net New,7,1,2,2,2
+ORD-00172,Communications,Engineering,Crown Consulting 29,Existing Project,18,5,2,3,8
+ORD-00173,Tech - New Age,BPS,Jade Telecom 30,Incremental,9,2,2,2,3
+ORD-00174,Tech - New Age,BPS,Jade Telecom 30,Net New,17,3,2,2,10
+ORD-00175,Tech - New Age,BPS,Jade Telecom 30,Existing Project,5,1,1,2,1
+ORD-00176,Tech - New Age,TS - CRS,Jade Telecom 30,Existing Project,5,2,0,2,1
+ORD-00177,Tech - New Age,TS - CRS,Jade Telecom 30,Incremental,11,1,5,1,4
+ORD-00178,Tech - New Age,TS - CRS,Jade Telecom 30,Existing Project,5,2,1,1,1
+ORD-00179,Tech - New Age,TS - ICD,Jade Telecom 30,Incremental,8,2,3,2,1
+ORD-00180,Tech - New Age,TS - ICD,Jade Telecom 30,Incremental,5,2,1,2,0
+ORD-00181,Tech - New Age,WC - Consulting,Summit Holdings 31,Existing Project,16,5,7,1,3
+ORD-00182,Tech - New Age,WC - Consulting,Summit Holdings 31,Incremental,5,2,1,2,0
+ORD-00183,Tech - New Age,TS - DAAI,Summit Holdings 31,Existing Project,9,3,4,2,0
+ORD-00184,Tech - New Age,TS - DAAI,Summit Holdings 31,Existing Project,5,2,1,1,1
+ORD-00185,Tech - New Age,TS - DAAI,Summit Holdings 31,Incremental,5,3,0,2,0
+ORD-00186,Tech - Software and Gaming,TS - TTMS,Willow Retail 32,Existing Project,5,2,1,1,1
+ORD-00187,Tech - Software and Gaming,TS - TTMS,Willow Retail 32,Existing Project,5,1,1,2,1
+ORD-00188,Tech - Software and Gaming,WC - Consulting,Willow Retail 32,Existing Project,8,2,3,1,2
+ORD-00189,Consumer,TS - CIS,Blue Foods 33,Incremental,10,1,6,1,2
+ORD-00190,Consumer,TS - CIS,Blue Foods 33,Incremental,5,1,2,2,0
+ORD-00191,Consumer,BPS,Blue Foods 33,Incremental,7,1,1,5,0
+ORD-00192,Consumer,BPS,Blue Foods 33,Incremental,5,4,1,0,0
+ORD-00193,Consumer,TS - CRS,Blue Foods 33,Incremental,10,4,2,2,2
+ORD-00194,Consumer,TS - CRS,Blue Foods 33,Existing Project,8,1,2,5,0
+ORD-00195,Consumer,TS - TTMS,Blue Foods 33,Incremental,8,2,3,1,2
+ORD-00196,Consumer,TS - TTMS,Blue Foods 33,Existing Project,17,5,6,2,4
+ORD-00197,Health,TS - DAAI,Nova Capital 34,Net New,12,3,5,4,0
+ORD-00198,Health,TS - DAAI,Nova Capital 34,Existing Project,19,4,4,7,4
+ORD-00199,Health,Engineering,Nova Capital 34,Existing Project,15,1,2,7,5
+ORD-00200,Health,Engineering,Nova Capital 34,Existing Project,14,4,3,4,3
+ORD-00201,Health,Engineering,Nova Capital 34,Existing Project,12,4,1,5,2
+ORD-00202,Health,BPS,Nova Capital 34,Net New,10,1,5,2,2
+ORD-00203,Health,BPS,Nova Capital 34,Existing Project,16,6,4,3,3
+ORD-00204,Health,BPS,Nova Capital 34,Existing Project,41,30,1,4,6
+ORD-00205,Health,TS - CRS,Nova Capital 34,Existing Project,9,4,1,1,3
+ORD-00206,Health,TS - CRS,Nova Capital 34,Existing Project,6,2,2,1,1
+ORD-00207,Health,TS - CRS,Nova Capital 34,Existing Project,22,3,12,5,2
+ORD-00208,Health,TS - CRS,Crown Foods 35,Net New,19,2,7,3,7
+ORD-00209,Health,TS - CRS,Crown Foods 35,Incremental,6,2,3,1,0
+ORD-00210,Health,TS - CRS,Crown Foods 35,Existing Project,6,2,2,1,1
+ORD-00211,Health,BPS,Crown Foods 35,Net New,8,1,1,6,0
+ORD-00212,Health,BPS,Crown Foods 35,Incremental,12,5,5,0,2
+ORD-00213,Health,TS - CIS,Crown Foods 35,Existing Project,7,0,3,3,1
+ORD-00214,Health,TS - CIS,Crown Foods 35,Existing Project,5,2,1,0,2
+ORD-00215,Consumer,TS - EA,Cobalt Health 36,Existing Project,6,1,2,2,1
+ORD-00216,Consumer,TS - EA,Cobalt Health 36,Existing Project,11,4,2,3,2
+ORD-00217,Consumer,BPS,Cobalt Health 36,Existing Project,10,2,3,2,3
+ORD-00218,Consumer,BPS,Cobalt Health 36,Existing Project,9,6,3,0,0
+ORD-00219,Consumer,BPS,Cobalt Health 36,Existing Project,8,2,3,3,0
+ORD-00220,Consumer,WC - Consulting,Cobalt Health 36,Incremental,5,-1,2,3,1
+ORD-00221,Consumer,WC - Consulting,Cobalt Health 36,Existing Project,5,1,2,2,0
+ORD-00222,Consumer,WC - Consulting,Cobalt Health 36,Existing Project,21,7,3,9,2
+ORD-00223,Communications,BPS,Matrix Mobility 37,Incremental,9,4,1,1,3
+ORD-00224,Communications,BPS,Matrix Mobility 37,Existing Project,6,1,2,2,1
+ORD-00225,Communications,TS - ICD,Matrix Mobility 37,Existing Project,5,2,0,1,2
+ORD-00226,Communications,TS - DAAI,Matrix Mobility 37,Existing Project,13,2,2,7,2
+ORD-00227,Communications,TS - DAAI,Matrix Mobility 37,Incremental,5,1,3,0,1
+ORD-00228,Communications,TS - DAAI,Matrix Mobility 37,Incremental,7,1,2,4,0
+ORD-00229,Communications,Engineering,Matrix Mobility 37,Incremental,20,6,8,5,1
+ORD-00230,Communications,Engineering,Matrix Mobility 37,Existing Project,5,2,0,2,1
+ORD-00231,Communications,Engineering,Matrix Mobility 37,Net New,5,1,2,2,0
+ORD-00232,Health,WC - Consulting,Orion Telecom 38,Existing Project,5,1,1,2,1
+ORD-00233,Health,TS - DAAI,Orion Telecom 38,Incremental,6,0,3,2,1
+ORD-00234,Health,TS - DAAI,Orion Telecom 38,Existing Project,5,2,1,1,1
+ORD-00235,Health,TS - CIS,Orion Telecom 38,Existing Project,7,2,4,1,0
+ORD-00236,Health,TS - CIS,Orion Telecom 38,Existing Project,14,3,5,5,1
+ORD-00237,Health,TS - EA,Orion Telecom 38,Existing Project,6,2,1,2,1
+ORD-00238,Consumer,TS - CRS,Falcon Telecom 39,Existing Project,9,2,2,3,2
+ORD-00239,Consumer,TS - CIS,Falcon Telecom 39,Existing Project,5,2,1,1,1
+ORD-00240,Consumer,TS - CIS,Falcon Telecom 39,Net New,34,7,8,14,5
+ORD-00241,Tech - New Age,Engineering,Lumina Holdings 40,Existing Project,7,3,0,3,1
+ORD-00242,Tech - New Age,TS - CRS,Lumina Holdings 40,Incremental,6,0,5,1,0
+ORD-00243,Tech - New Age,TS - TTMS,Lumina Holdings 40,Existing Project,8,1,4,1,2
+ORD-00244,Tech - New Age,TS - TTMS,Lumina Holdings 40,Incremental,7,0,5,1,1
+ORD-00245,Tech - New Age,BPS,Lumina Holdings 40,Existing Project,6,1,1,3,1
+ORD-00246,Health,TS - DAAI,Vertex Mobility 41,Existing Project,15,4,3,2,6
+ORD-00247,Health,Engineering,Vertex Mobility 41,Existing Project,6,2,2,1,1
+ORD-00248,Tech - Software and Gaming,BPS,Willow Retail 42,Net New,8,0,5,2,1
+ORD-00249,Tech - Software and Gaming,TS - ICD,Willow Retail 42,Existing Project,22,7,3,7,5
+ORD-00250,Tech - New Age,TS - CIS,Titan Labs 43,Incremental,10,5,1,3,1
+ORD-00251,Tech - New Age,TS - CIS,Titan Labs 43,Existing Project,8,4,1,0,3
+ORD-00252,Tech - New Age,TS - CRS,Titan Labs 43,Incremental,7,1,5,1,0
+ORD-00253,Tech - New Age,Engineering,Titan Labs 43,Existing Project,46,9,12,8,17
+ORD-00254,Tech - New Age,Engineering,Titan Labs 43,Incremental,31,5,7,15,4
+ORD-00255,Consumer,TS - CIS,River Foods 44,Existing Project,11,6,2,2,1
+ORD-00256,Consumer,TS - CIS,River Foods 44,Incremental,11,4,4,1,2
+ORD-00257,Consumer,TS - CIS,River Foods 44,Existing Project,16,7,5,1,3
+ORD-00258,Consumer,TS - ICD,River Foods 44,Incremental,8,3,1,3,1
+ORD-00259,Consumer,TS - ICD,River Foods 44,Net New,5,0,3,1,1
+ORD-00260,Consumer,TS - ICD,River Foods 44,Incremental,5,1,2,1,1
+ORD-00261,Tech - Software and Gaming,TS - TTMS,Falcon Gaming 45,Existing Project,17,13,2,1,1
+ORD-00262,Tech - Software and Gaming,TS - TTMS,Falcon Gaming 45,Existing Project,5,3,0,0,2
+ORD-00263,Tech - Software and Gaming,TS - TTMS,Falcon Gaming 45,Incremental,11,3,2,3,3
+ORD-00264,Tech - Software and Gaming,TS - CRS,Falcon Gaming 45,Incremental,14,8,1,2,3
+ORD-00265,Tech - Software and Gaming,TS - CRS,Falcon Gaming 45,Net New,5,1,4,0,0
+ORD-00266,Tech - Software and Gaming,Engineering,Falcon Gaming 45,Existing Project,5,3,1,1,0
+ORD-00267,Tech - Software and Gaming,Engineering,Falcon Gaming 45,Incremental,15,5,2,1,7
+ORD-00268,Tech - Software and Gaming,Engineering,Falcon Gaming 45,Existing Project,5,2,0,2,1
+ORD-00269,Tech - Software and Gaming,WC - Consulting,Falcon Gaming 45,Incremental,5,2,1,1,1
+ORD-00270,Tech - Software and Gaming,WC - Consulting,Falcon Gaming 45,Net New,5,0,1,2,2

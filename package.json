@@ -1,26 +1,27 @@
 {
-  "name": "opswhisperer",
+  "name": "coo-ops-cockpit",
   "version": "0.1.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
-    "start": "next start",
+    "build": "node_modules/next/dist/bin/next build",
+    "start": "node_modules/next/dist/bin/next start start",
     "lint": "eslint"
   },
   "dependencies": {
     "next": "16.1.6",
     "react": "19.2.3",
-    "react-dom": "19.2.3"
+    "react-dom": "19.2.3",
+    "recharts": "2.15.4"
   },
   "devDependencies": {
-    "@tailwindcss/postcss": "^4",
+    "@tailwindcss/postcss": "^4.1.16",
     "@types/node": "^20",
     "@types/react": "^19",
     "@types/react-dom": "^19",
     "eslint": "^9",
     "eslint-config-next": "16.1.6",
-    "tailwindcss": "^4",
+    "tailwindcss": "^4.1.16",
     "typescript": "^5"
   }
 }
