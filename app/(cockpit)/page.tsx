@@ -1,4 +1,4 @@
-import type { ReactNode } from "react";
+import { Suspense, type ReactNode } from "react";
 import Link from "next/link";
 import { HistoricalMetricChart } from "@/components/Charts";
 import { HomeFilters } from "@/components/HomeFilters";
@@ -37,13 +37,15 @@ export default async function ExecutiveOverview({
             <div className="mx-auto mb-8 flex w-full max-w-[1100px] items-center justify-between">
               <h1 className="text-3xl font-semibold uppercase tracking-[0.12em] text-slate-100">Q4-2026</h1>
               <div className="px-2">
-                <HomeFilters
-                  view={view}
-                  sectorId={sectorId}
-                  serviceLineId={serviceLineId}
-                  sectors={csvOverview.sectors}
-                  serviceLines={csvOverview.serviceLines}
-                />
+                <Suspense fallback={null}>
+                  <HomeFilters
+                    view={view}
+                    sectorId={sectorId}
+                    serviceLineId={serviceLineId}
+                    sectors={csvOverview.sectors}
+                    serviceLines={csvOverview.serviceLines}
+                  />
+                </Suspense>
               </div>
             </div>
 
@@ -118,7 +120,9 @@ export default async function ExecutiveOverview({
               </div>
             )}
           </main>
-          <LeadershipChatPanel />
+          <Suspense fallback={null}>
+            <LeadershipChatPanel />
+          </Suspense>
     </div>
   );
 }

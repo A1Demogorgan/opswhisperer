@@ -1,3 +1,4 @@
+import { Suspense } from "react";
 import { CockpitTopNav } from "@/components/CockpitTopNav";
 import CockpitHomePage from "./(cockpit)/page";
 
@@ -8,7 +9,9 @@ export default async function LandingPage({
 }) {
   return (
     <div className="min-h-screen bg-slate-950 text-slate-100">
-      <CockpitTopNav />
+      <Suspense fallback={null}>
+        <CockpitTopNav />
+      </Suspense>
       <CockpitHomePage searchParams={searchParams} />
     </div>
   );
