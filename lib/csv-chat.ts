@@ -1,5 +1,6 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
+import { normalizeCsvServiceLineRow } from "@/lib/service-line";
 
 const DATA_DIR = path.join(process.cwd(), "data");
 
@@ -239,6 +240,8 @@ async function readCsv(fileName: string): Promise<CsvRow[]> {
   const headers = headerLine.split(",");
   return lines.filter(Boolean).map((line) => {
     const values = line.split(",");
-    return Object.fromEntries(headers.map((header, index) => [header, values[index] ?? ""]));
+    return normalizeCsvServiceLineRow(
+      Object.fromEntries(headers.map((header, index) => [header, values[index] ?? ""])),
+    );
   });
 }

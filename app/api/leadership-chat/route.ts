@@ -16,6 +16,13 @@ type Body = {
   history?: Array<{ role: "user" | "assistant"; text: string }>;
 };
 
+type LeadershipChatResponse = {
+  summary: string;
+  concerns: string[];
+  answer: string;
+  answerBullets: string[];
+};
+
 type AzureOpenAiConfig = {
   endpoint: string;
   apiKey: string;
@@ -43,16 +50,16 @@ export async function POST(req: Request) {
     `Net BPM growth gap vs budget: ${formatSignedNumber(overview.kpis.netBpmActual - overview.kpis.netBpmTarget)}.`,
     `RU/RD balance: actual RU ${formatNumber(overview.kpis.ruBpmActual)} vs actual RD ${formatNumber(overview.kpis.rdBpmActual)}.`,
   ];
+  const summary = `Leadership focus for ${overview.quarter}`;
 
   const fallbackAnswer = buildFallbackAnswer(question, overview);
+  const fallbackBullets = buildFallbackBullets(summary, question, overview, concerns);
   const azureConfig = getAzureOpenAiConfig();
 
   if (!azureConfig) {
-    return NextResponse.json({
-      summary: `Leadership focus for ${overview.quarter}`,
-      concerns,
-      answer: fallbackAnswer,
-    });
+    return NextResponse.json(
+      buildResponsePayload(summary, concerns, fallbackAnswer, fallbackBullets),
+    );
   }
 
   const generatedQuery = await generateQueryWithLlm({
@@ -91,12 +98,11 @@ export async function POST(req: Request) {
     queryResult,
     fallbackAnswer,
   });
+  const answerBullets = formatAnswerAsBullets(answer, fallbackBullets);
 
-  return NextResponse.json({
-    summary: `Leadership focus for ${overview.quarter}`,
-    concerns,
-    answer,
-  });
+  return NextResponse.json(
+    buildResponsePayload(summary, concerns, answer, answerBullets),
+  );
 }
 
 async function generateQueryWithLlm(input: {
@@ -179,7 +185,10 @@ async function answerWithLlm(input: {
 
   const prompt = [
     "Answer the question in natural language using the provided query output and dashboard snapshot.",
-    "Be specific, quote key numbers, and mention filters/time windows when relevant.",
+    "Respond as exactly 5 or 6 concise bullet points.",
+    "Each bullet must be one line, start with '- ', and include concrete metrics where relevant.",
+    "Do not add headings, intro text, outro text, or paragraphs outside the bullets.",
+    "Mention filters/time windows when relevant.",
     "If query output is missing or insufficient, say so and use fallback.",
     "",
     `Question: ${input.question}`,
@@ -223,6 +232,20 @@ async function answerWithLlm(input: {
   ], 500);
 
   return raw?.trim() || input.fallbackAnswer;
+}
+
+function buildResponsePayload(
+  summary: string,
+  concerns: string[],
+  answer: string,
+  answerBullets: string[],
+): LeadershipChatResponse {
+  return {
+    summary,
+    concerns,
+    answer,
+    answerBullets,
+  };
 }
 
 async function chatCompletion(
@@ -395,6 +418,69 @@ function buildFallbackAnswer(
     return `RD BPM actual QTD is ${formatNumber(overview.kpis.rdBpmActual)} vs budget ${formatNumber(overview.kpis.rdBpmTarget)} and forecast ${formatNumber(overview.kpis.rdBpmBudget)}.`;
   }
   return `Current status: revenue ${formatCurrency(overview.revenue.actual)} actual QTD, BPM ${formatNumber(overview.bpm.actual)} actual QTD, Net BPM ${formatNumber(overview.kpis.netBpmActual)} actual QTD.`;
+}
+
+function buildFallbackBullets(
+  summary: string,
+  question: string,
+  overview: Awaited<ReturnType<typeof getCsvQuarterOverview>>,
+  concerns: string[],
+): string[] {
+  const focus = question.trim().toLowerCase() === "summary"
+    ? "Current operating snapshot"
+    : `Question focus: ${question.trim()}`;
+
+  return [
+    `${summary}. ${focus}.`,
+    `Revenue actual QTD is ${formatCurrency(overview.revenue.actual)} against budget ${formatCurrency(overview.revenue.target)} and forecast ${formatCurrency(overview.revenue.forecast)}.`,
+    `BPM actual QTD is ${formatNumber(overview.bpm.actual)} and Net BPM actual QTD is ${formatNumber(overview.kpis.netBpmActual)} versus budget ${formatNumber(overview.kpis.netBpmTarget)}.`,
+    concerns[0],
+    concerns[2],
+    concerns[3],
+  ].slice(0, 6);
+}
+
+function formatAnswerAsBullets(raw: string, fallbackBullets: string[]): string[] {
+  const normalized = raw
+    .split(/\r?\n+/)
+    .map((line) => line.trim())
+    .flatMap((line) => {
+      if (!line) return [];
+      if (/^[-*•]\s+/.test(line)) return [stripBulletPrefix(line)];
+      return splitIntoSentences(line);
+    })
+    .map((line) => line.replace(/\s+/g, " ").trim())
+    .filter(Boolean);
+
+  const unique = dedupeBullets(normalized);
+  if (unique.length >= 5) {
+    return unique.slice(0, 6);
+  }
+
+  return dedupeBullets([...unique, ...fallbackBullets]).slice(0, 6);
+}
+
+function stripBulletPrefix(line: string): string {
+  return line.replace(/^[-*•]\s+/, "").trim();
+}
+
+function splitIntoSentences(line: string): string[] {
+  const parts = line.match(/[^.!?]+[.!?]?/g) ?? [line];
+  return parts.map((part) => part.trim()).filter(Boolean);
+}
+
+function dedupeBullets(items: string[]): string[] {
+  const seen = new Set<string>();
+  const unique: string[] = [];
+
+  for (const item of items) {
+    const key = item.toLowerCase();
+    if (seen.has(key)) continue;
+    seen.add(key);
+    unique.push(item);
+  }
+
+  return unique;
 }
 
 async function readDataDefinition(): Promise<string> {

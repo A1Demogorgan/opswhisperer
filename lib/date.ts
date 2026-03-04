@@ -80,3 +80,17 @@ export function nextQuarter(quarter: QuarterKey): QuarterKey {
   if (q === 4) return `${year + 1}-Q1` as QuarterKey;
   return `${year}-Q${q + 1}` as QuarterKey;
 }
+
+export function formatQuarterDisplay(
+  quarter: string,
+  quarterOffset = 0,
+): string {
+  const match = quarter.match(/^(\d{4})-?Q(\d)$/);
+  if (!match) return quarter;
+
+  const [, yearRaw, qRaw] = match;
+  const zeroBasedQuarterIndex = (Number(yearRaw) * 4) + (Number(qRaw) - 1) + quarterOffset;
+  const year = Math.floor(zeroBasedQuarterIndex / 4);
+  const quarterNumber = (zeroBasedQuarterIndex % 4) + 1;
+  return `${year}-Q${quarterNumber}`;
+}

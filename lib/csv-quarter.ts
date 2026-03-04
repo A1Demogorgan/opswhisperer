@@ -1,6 +1,7 @@
 import { promises as fs } from "node:fs";
 import path from "node:path";
-import { quarterFromDate, todayDate, toISODate } from "@/lib/date";
+import { formatQuarterDisplay, quarterFromDate, todayDate, toISODate } from "@/lib/date";
+import { normalizeCsvServiceLineRow } from "@/lib/service-line";
 
 const DATA_DIR = path.join(process.cwd(), "data");
 const BLENDED_RATE_PER_HOUR = 50;
@@ -106,6 +107,34 @@ export type CsvQuarterOverview = {
   };
 };
 
+export type HistoricalSeriesPoint = {
+  label: string;
+  quarter: string;
+  budget: number;
+  sold: number;
+  forecast: number;
+  expected: number;
+  actual: number;
+};
+
+export type CsvHistoricalOverview = {
+  availableQuarters: string[];
+  quarterly: {
+    revenue: HistoricalSeriesPoint[];
+    bpm: HistoricalSeriesPoint[];
+    netBpm: HistoricalSeriesPoint[];
+    ruBpm: HistoricalSeriesPoint[];
+    rdBpm: HistoricalSeriesPoint[];
+  };
+  weeklyAverage: {
+    revenue: HistoricalSeriesPoint[];
+    bpm: HistoricalSeriesPoint[];
+    netBpm: HistoricalSeriesPoint[];
+    ruBpm: HistoricalSeriesPoint[];
+    rdBpm: HistoricalSeriesPoint[];
+  };
+};
+
 export async function getCsvQuarterOverview(filters: Filters): Promise<CsvQuarterOverview> {
   const asOfDate = todayDate();
   const currentQuarter = quarterFromDate(asOfDate);
@@ -125,7 +154,7 @@ export async function getCsvQuarterOverview(filters: Filters): Promise<CsvQuarte
     uniqueValues(targets.map((row) => row.sector).filter(Boolean)),
   );
   const serviceLines = toOptions(
-    uniqueValues(targets.map((row) => row.service_line).filter(Boolean)),
+    sortServiceLineValues(uniqueValues(targets.map((row) => row.service_line).filter(Boolean))),
   );
 
   const matches = (row: CsvRow) => {
@@ -253,6 +282,47 @@ export async function getCsvQuarterOverview(filters: Filters): Promise<CsvQuarte
   };
 }
 
+export async function getCsvHistoricalOverview(
+  filters: Filters,
+  selectedQuarters?: string[],
+): Promise<CsvHistoricalOverview> {
+  const historicalRows = await readCsv("historical_quarterly_last8q.csv");
+  const filteredRows = historicalRows.filter((row) => {
+    if (filters.sectorId && row.sector !== filters.sectorId) return false;
+    if (filters.serviceLineId && row.service_line !== filters.serviceLineId) return false;
+    return true;
+  });
+
+  const grouped = aggregateHistoricalRows(filteredRows);
+  const allQuarters = Array.from(grouped.keys()).sort((a, b) => a.localeCompare(b));
+  const activeQuarterSet = new Set(
+    (selectedQuarters?.length ? selectedQuarters : allQuarters).filter((quarter) =>
+      grouped.has(quarter),
+    ),
+  );
+
+  const quarterlyPoints = buildHistoricalPoints(allQuarters, grouped);
+  const selectedQuarterPoints = quarterlyPoints.filter((point) => activeQuarterSet.has(point.quarter));
+
+  return {
+    availableQuarters: allQuarters,
+    quarterly: {
+      revenue: quarterlyPoints.map((point) => point.revenue),
+      bpm: quarterlyPoints.map((point) => point.bpm),
+      netBpm: quarterlyPoints.map((point) => point.netBpm),
+      ruBpm: quarterlyPoints.map((point) => point.ruBpm),
+      rdBpm: quarterlyPoints.map((point) => point.rdBpm),
+    },
+    weeklyAverage: {
+      revenue: buildWeeklyAverageSeries(selectedQuarterPoints.map((point) => point.revenue)),
+      bpm: buildWeeklyAverageSeries(selectedQuarterPoints.map((point) => point.bpm)),
+      netBpm: buildWeeklyAverageSeries(selectedQuarterPoints.map((point) => point.netBpm)),
+      ruBpm: buildWeeklyAverageSeries(selectedQuarterPoints.map((point) => point.ruBpm)),
+      rdBpm: buildWeeklyAverageSeries(selectedQuarterPoints.map((point) => point.rdBpm)),
+    },
+  };
+}
+
 async function readCsv(fileName: string): Promise<CsvRow[]> {
   const raw = await fs.readFile(path.join(DATA_DIR, fileName), "utf8");
   const [headerLine, ...lines] = raw.trim().split(/\r?\n/);
@@ -261,7 +331,9 @@ async function readCsv(fileName: string): Promise<CsvRow[]> {
     .filter(Boolean)
     .map((line) => {
       const values = line.split(",");
-      return Object.fromEntries(headers.map((header, index) => [header, values[index] ?? ""]));
+      return normalizeCsvServiceLineRow(
+        Object.fromEntries(headers.map((header, index) => [header, values[index] ?? ""])),
+      );
     });
 }
 
@@ -349,6 +421,22 @@ function toOptions(values: string[]) {
   return values.map((value) => ({ id: value, name: value }));
 }
 
+function sortServiceLineValues(values: string[]): string[] {
+  return [...values].sort(compareServiceLines);
+}
+
+function compareServiceLines(a: string, b: string): number {
+  const aIsTechnologyServices = a.startsWith("Technology Services");
+  const bIsTechnologyServices = b.startsWith("Technology Services");
+
+  if (aIsTechnologyServices && !bIsTechnologyServices) return -1;
+  if (!aIsTechnologyServices && bIsTechnologyServices) return 1;
+
+  const aLabel = a.replace(/^Technology Services\s*-\s*/, "");
+  const bLabel = b.replace(/^Technology Services\s*-\s*/, "");
+  return aLabel.localeCompare(bLabel);
+}
+
 function sum(values: number[]): number {
   return values.reduce((total, value) => total + value, 0);
 }
@@ -391,6 +479,181 @@ function buildHistory(rows: CsvRow[]): Array<{
         people,
       };
     });
+}
+
+function aggregateHistoricalRows(rows: CsvRow[]) {
+  const grouped = new Map<
+    string,
+    {
+      revenueActual: number;
+      peopleStart: number;
+      peopleEnd: number;
+      ruActual: number;
+      rdActual: number;
+    }
+  >();
+
+  for (const row of rows) {
+    const quarter = row.quarter_id;
+    const peopleStart = toNumber(row.people_start_of_quarter);
+    const peopleEnd = toNumber(row.people_end_of_quarter);
+    const delta = peopleEnd - peopleStart;
+    const current = grouped.get(quarter) ?? {
+      revenueActual: 0,
+      peopleStart: 0,
+      peopleEnd: 0,
+      ruActual: 0,
+      rdActual: 0,
+    };
+
+    current.revenueActual += toNumber(row.quarterly_revenue_usd);
+    current.peopleStart += peopleStart;
+    current.peopleEnd += peopleEnd;
+    current.ruActual += Math.max(delta, 0);
+    current.rdActual += Math.max(-delta, 0);
+    grouped.set(quarter, current);
+  }
+
+  return grouped;
+}
+
+function buildHistoricalPoints(
+  quarters: string[],
+  grouped: Map<
+    string,
+    {
+      revenueActual: number;
+      peopleStart: number;
+      peopleEnd: number;
+      ruActual: number;
+      rdActual: number;
+    }
+  >,
+): Array<{
+  quarter: string;
+  revenue: HistoricalSeriesPoint;
+  bpm: HistoricalSeriesPoint;
+  netBpm: HistoricalSeriesPoint;
+  ruBpm: HistoricalSeriesPoint;
+  rdBpm: HistoricalSeriesPoint;
+}> {
+  return quarters.map((quarter, index) => {
+    const current = grouped.get(quarter) ?? {
+      revenueActual: 0,
+      peopleStart: 0,
+      peopleEnd: 0,
+      ruActual: 0,
+      rdActual: 0,
+    };
+    const quarterLabel = formatQuarterLabel(quarter);
+    const revenueActual = current.revenueActual;
+    const bpmActual = revenueActual / REVENUE_PER_BPM;
+    const netActual = current.ruActual - current.rdActual;
+    const revenuePlan = derivePlanValues(revenueActual, quarter, "revenue");
+    const bpmPlan = {
+      budget: revenuePlan.budget / REVENUE_PER_BPM,
+      sold: revenuePlan.sold / REVENUE_PER_BPM,
+      forecast: revenuePlan.forecast / REVENUE_PER_BPM,
+      expected: revenuePlan.expected / REVENUE_PER_BPM,
+      actual: bpmActual,
+    };
+    const ruPlan = derivePlanValues(current.ruActual, quarter, "ru");
+    const rdPlan = derivePlanValues(current.rdActual, quarter, "rd");
+    const netPlan = deriveSignedPlanValues(
+      netActual,
+      quarter,
+      index === 0 ? bpmActual : (grouped.get(quarters[index - 1])?.revenueActual ?? 0) / REVENUE_PER_BPM,
+    );
+
+    return {
+      quarter,
+      revenue: { label: quarterLabel, quarter, ...revenuePlan },
+      bpm: { label: quarterLabel, quarter, ...bpmPlan },
+      netBpm: { label: quarterLabel, quarter, ...netPlan },
+      ruBpm: { label: quarterLabel, quarter, ...ruPlan },
+      rdBpm: { label: quarterLabel, quarter, ...rdPlan },
+    };
+  });
+}
+
+function derivePlanValues(actual: number, quarter: string, metric: string) {
+  const rng = seededValue(`${quarter}:${metric}`);
+  const budgetMultiplier = 1.1 + rng * 0.14;
+  const soldMultiplier = budgetMultiplier * (0.88 + seededValue(`${quarter}:${metric}:sold`) * 0.1);
+  const forecastMultiplier = soldMultiplier * (0.95 + seededValue(`${quarter}:${metric}:forecast`) * 0.08);
+  const expectedMultiplier = forecastMultiplier * (0.82 + seededValue(`${quarter}:${metric}:expected`) * 0.08);
+
+  return {
+    budget: actual * budgetMultiplier,
+    sold: actual * soldMultiplier,
+    forecast: actual * forecastMultiplier,
+    expected: actual * expectedMultiplier,
+    actual,
+  };
+}
+
+function deriveSignedPlanValues(actual: number, quarter: string, baseline: number) {
+  const direction = actual < 0 ? -1 : 1;
+  const magnitude = Math.abs(actual);
+  const plan = derivePlanValues(Math.max(magnitude, baseline * 0.02), `${quarter}:net`, "net");
+
+  return {
+    budget: plan.budget * direction,
+    sold: plan.sold * direction,
+    forecast: plan.forecast * direction,
+    expected: plan.expected * direction,
+    actual,
+  };
+}
+
+function seededValue(seed: string): number {
+  let hash = 0;
+  for (let i = 0; i < seed.length; i += 1) {
+    hash = (hash * 31 + seed.charCodeAt(i)) >>> 0;
+  }
+  return hash / 4294967295;
+}
+
+function formatQuarterLabel(quarter: string): string {
+  return formatQuarterDisplay(quarter, 3);
+}
+
+function buildWeeklyAverageSeries(points: HistoricalSeriesPoint[]): HistoricalSeriesPoint[] {
+  const weeklyProfiles = points.map((point) => ({
+    quarter: point.quarter,
+    budget: buildWeeklyProfile(point.quarter, "budget", point.budget),
+    sold: buildWeeklyProfile(point.quarter, "sold", point.sold),
+    forecast: buildWeeklyProfile(point.quarter, "forecast", point.forecast),
+    expected: buildWeeklyProfile(point.quarter, "expected", point.expected),
+    actual: buildWeeklyProfile(point.quarter, "actual", point.actual),
+  }));
+
+  return Array.from({ length: 12 }, (_, index) => ({
+    label: `W${index + 1}`,
+    quarter: "multi",
+    budget: average(weeklyProfiles.map((profile) => profile.budget[index] ?? 0)),
+    sold: average(weeklyProfiles.map((profile) => profile.sold[index] ?? 0)),
+    forecast: average(weeklyProfiles.map((profile) => profile.forecast[index] ?? 0)),
+    expected: average(weeklyProfiles.map((profile) => profile.expected[index] ?? 0)),
+    actual: average(weeklyProfiles.map((profile) => profile.actual[index] ?? 0)),
+  }));
+}
+
+function buildWeeklyProfile(quarter: string, metric: string, total: number): number[] {
+  const baseWeights = Array.from({ length: 12 }, (_, index) => {
+    const seed = seededValue(`${quarter}:${metric}:week:${index + 1}`);
+    const seasonal = 0.82 + seed * 0.36;
+    const directional = 0.92 + ((index / 11) * 0.16);
+    return seasonal * directional;
+  });
+
+  const denominator = sum(baseWeights);
+  if (!denominator) return Array.from({ length: 12 }, () => 0);
+  return baseWeights.map((weight) => (total * weight) / denominator);
+}
+
+function average(values: number[]): number {
+  return values.length ? sum(values) / values.length : 0;
 }
 
 function buildFulfillmentData(rows: CsvRow[]) {

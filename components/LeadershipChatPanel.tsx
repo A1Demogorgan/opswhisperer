@@ -5,20 +5,20 @@ import { useSearchParams } from "next/navigation";
 
 type LeadershipReply = {
   summary: string;
-  concerns: string[];
   answer: string;
+  answerBullets: string[];
 };
 
 type Message = {
   role: "assistant" | "user";
-  text: string;
+  text?: string;
+  bullets?: string[];
 };
 
 export function LeadershipChatPanel() {
   const search = useSearchParams();
   const query = useMemo(() => search.toString(), [search]);
   const [messages, setMessages] = useState<Message[]>([]);
-  const [concerns, setConcerns] = useState<string[]>([]);
   const [question, setQuestion] = useState("");
   const [loading, setLoading] = useState(false);
   const [open, setOpen] = useState(false);
@@ -37,8 +37,10 @@ export function LeadershipChatPanel() {
       body: JSON.stringify({ question: trimmed, query, history: nextMessages }),
     });
     const data = (await res.json()) as LeadershipReply;
-    setConcerns(data.concerns);
-    setMessages((prev) => [...prev, { role: "assistant", text: data.answer }]);
+    setMessages((prev) => [
+      ...prev,
+      { role: "assistant", bullets: data.answerBullets },
+    ]);
     setLoading(false);
     setQuestion("");
   };
@@ -55,8 +57,7 @@ export function LeadershipChatPanel() {
       });
       const data = (await res.json()) as LeadershipReply;
       if (cancelled) return;
-      setConcerns(data.concerns);
-      setMessages([{ role: "assistant", text: `${data.summary}\n\n${data.answer}` }]);
+      setMessages([{ role: "assistant", bullets: data.answerBullets }]);
       setLoading(false);
     };
     load();
@@ -86,14 +87,6 @@ export function LeadershipChatPanel() {
               Close
             </button>
           </div>
-
-          <div className="border-b border-slate-800 px-4 py-3">
-            <p className="text-xs uppercase tracking-[0.16em] text-slate-400">Key Gaps</p>
-            <ul className="mt-2 list-disc space-y-1 pl-4 text-xs text-slate-300">
-              {concerns.length ? concerns.map((item) => <li key={item}>{item}</li>) : <li>Loading current gap narrative...</li>}
-            </ul>
-          </div>
-
           <div className="flex-1 space-y-3 overflow-y-auto px-4 py-3">
             {messages.map((message, index) => (
               <div
@@ -104,7 +97,15 @@ export function LeadershipChatPanel() {
                     : "ml-auto bg-blue-700/80 text-white"
                 }`}
               >
-                {message.text}
+                {message.role === "assistant" && message.bullets?.length ? (
+                  <ul className="list-disc space-y-1 pl-4">
+                    {message.bullets.map((bullet) => (
+                      <li key={bullet}>{bullet}</li>
+                    ))}
+                  </ul>
+                ) : (
+                  message.text
+                )}
               </div>
             ))}
             {loading ? <p className="text-xs text-slate-400">Thinking...</p> : null}

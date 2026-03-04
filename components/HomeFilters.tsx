@@ -52,7 +52,7 @@ export function HomeFilters({
           onChange={(e) => setFilter("serviceLineId", e.target.value)}
           className="mt-1 w-56 rounded border border-slate-700 bg-slate-950 px-2 py-2 text-sm text-slate-100"
         >
-          <option value="">All service lines</option>
+          <option value="">Technology Services</option>
           {serviceLines.map((s) => (
             <option key={s.id} value={s.id}>
               {s.name}

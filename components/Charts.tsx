@@ -66,6 +66,53 @@ export function HistoricalMetricChart({
   );
 }
 
+export function HistoricalComparisonChart({
+  title,
+  data,
+  format,
+}: {
+  title: string;
+  data: Array<{
+    label: string;
+    budget: number;
+    sold: number;
+    forecast: number;
+    expected: number;
+    actual: number;
+  }>;
+  format: "currency" | "number";
+}) {
+  return (
+    <div className="h-80 rounded-lg border border-slate-800 bg-slate-900/70 p-4">
+      <p className="mb-3 text-sm font-semibold text-slate-100">{title}</p>
+      <ResponsiveContainer width="100%" height="100%">
+        <LineChart data={data} margin={{ top: 8, right: 12, left: 6, bottom: 6 }}>
+          <CartesianGrid stroke="#334155" strokeDasharray="3 3" />
+          <XAxis dataKey="label" stroke="#94a3b8" tick={{ fill: "#94a3b8", fontSize: 12 }} />
+          <YAxis
+            stroke="#94a3b8"
+            tick={{ fill: "#94a3b8", fontSize: 12 }}
+            tickFormatter={(value: number) => formatCompactNumber(value)}
+          />
+          <Tooltip
+            formatter={(value: number) => formatTooltipValue(value, format)}
+            contentStyle={{ backgroundColor: "#020617", border: "1px solid #334155", borderRadius: 12 }}
+            labelStyle={{ color: "#e2e8f0" }}
+          />
+          <Line type="monotone" dataKey="budget" stroke="#a78bfa" strokeWidth={2.5} dot={{ r: 2 }} />
+          <Line type="monotone" dataKey="sold" stroke="#f59e0b" strokeWidth={2.5} dot={{ r: 2 }} />
+          <Line type="monotone" dataKey="forecast" stroke="#22c55e" strokeWidth={2.5} dot={{ r: 2 }} />
+          <Line type="monotone" dataKey="expected" stroke="#f97316" strokeWidth={2.5} dot={{ r: 2 }} />
+          <Line type="monotone" dataKey="actual" stroke="#38bdf8" strokeWidth={2.5} dot={{ r: 2 }} />
+        </LineChart>
+      </ResponsiveContainer>
+      <p className="mt-1 text-[11px] text-slate-400">
+        Purple: Budget | Amber: Sold | Green: Forecast | Orange: Expected | Blue: Actual
+      </p>
+    </div>
+  );
+}
+
 export function TimelineComparisonChart({
   title,
   data,
